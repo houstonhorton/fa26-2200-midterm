@@ -66,15 +66,23 @@
         padding: var(--spacing-xl);
     }
 
+    .nav {
+        flex-direction: row;
+    }
+
     .container {
         max-width: 1200px;
         margin: 0 auto;
     }
 
+    .titleLogo {
+        width: 100px;
+    }
+
     /* Typography Styles */
     h1 {
         font-family: var(--font-primary);
-        font-size: 3rem;
+        font-size: 5rem;
         font-weight: 700;
         margin-bottom: var(--spacing-md);
         color: var(--color-primary);
@@ -82,7 +90,7 @@
 
     h2 {
         font-family: var(--font-primary);
-        font-size: 2rem;
+        font-size: 3rem;
         font-weight: 600;
         margin-bottom: var(--spacing-md);
         color: var(--color-secondary);
@@ -90,7 +98,7 @@
 
     h3 {
         font-family: var(--font-primary);
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 500;
         margin-bottom: var(--spacing-sm);
         color: var(--color-accent);
