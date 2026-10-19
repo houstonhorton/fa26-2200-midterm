@@ -1,62 +1,777 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <title>ATLAS | BTU Lab - Mischief Makers</title>
+    
+    <!-- Google Fonts required by your CSS design system -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Commissioner:wght@400;600&family=Geologica:wght@400&display=swap" rel="stylesheet">
 
-    <title>ATLAS | BTU Lab</title>
-    <!-- comment here <link href="" rel="stylesheet" type="text/css"> -->
+    <!-- Your external CSS file -->
     <link rel="stylesheet" href="style.css">
 
+    <style>
+      /* Hero Banner Styling matching your screenshot */
+      .hero-banner {
+        position: relative;
+        background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('unnamed(10).jpg');
+        background-size: cover;
+        background-position: center;
+        padding: var(--spacing-xl) 0;
+        margin-bottom: var(--spacing-xl);
+        border-radius: var(--radius-md);
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      }
+
+      .hero-title-box {
+        background-color: rgba(0, 121, 145, 0.75); /* Uses your accent/teal tint */
+        color: var(--color-text-light);
+        padding: var(--spacing-md) var(--spacing-lg);
+        display: inline-block;
+        border-radius: var(--radius-sm);
+      }
+
+      .hero-title-box h1 {
+        font-family: var(--font-primary);
+        font-size: 3.5rem;
+        margin: 0;
+        color: var(--color-text-light);
+        letter-spacing: 1px;
+      }
+
+      /* Page Layout & Component Styling using your CSS variables */
+      .intro-section {
+        background-color: #ffffff;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      }
+
+      .section-heading {
+        font-family: var(--font-primary);
+        font-size: 2.5rem;
+        color: var(--color-secondary);
+        margin-top: var(--spacing-xl);
+        margin-bottom: var(--spacing-md);
+        border-bottom: 2px solid var(--color-secondary);
+        padding-bottom: var(--spacing-xs);
+      }
+
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: var(--spacing-lg);
+      }
+
+      .card {
+        background-color: #ffffff;
+        border-radius: var(--radius-md);
+        padding: var(--spacing-md);
+        display: flex;
+        flex-direction: column;
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        transition: transform 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-4px);
+      }
+
+      .card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: var(--radius-sm);
+        margin-bottom: var(--spacing-md);
+      }
+
+      .card h3 {
+        margin-bottom: var(--spacing-xs);
+        font-size: 1.5rem;
+      }
+
+      .card ul {
+        margin: var(--spacing-xs) 0 0 var(--spacing-md);
+        padding: 0;
+        font-size: 0.9rem;
+      }
+
+      .card li {
+        margin-bottom: 2px;
+      }
+
+      footer {
+        margin-top: var(--spacing-xl);
+        padding-top: var(--spacing-md);
+        border-top: 1px solid color-mix(in srgb, var(--color-neutral) 20%, transparent);
+        text-align: center;
+      }
+    </style>
   </head>
 
   <body>
-    <div class="header">
-      <h1><a href="/assets/btulogo.jpg"><img src="assets/btulogo.jpg" alt="logo"></a>BLOW. THINGS. UP.</h1>
+    <div class="container">
+
+      <!-- Hero Banner Section -->
+      <header class="hero-banner">
+        <div class="hero-title-box">
+          <h1>The BTU "Mischief Makers"</h1>
+        </div>
+      </header>
+
+      <main>
+        <article>
+          <!-- Intro Section -->
+          <section class="intro-section">
+            <h2>Make your Mischief!</h2>
+            <p class="body-text">Use this directory to contact BTU staff about your interests or questions. Next to each person's image, is a list of things they can help you with, and their contact information. Reach out! We love to help.</p>
+            <p class="body-text"><strong>Become part of the team!</strong> Email Zack Weaver if you're interested in sharing your skills with the community.</p>
+          </section>
+
+          <!-- Current Staff -->
+          <h2 class="section-heading">★Fall 2026 Staff★</h2>
+          <div class="team-grid">
+            
+            <div class="card">
+              <img src="unnamed(11).jpg" alt="Zack Weaver">
+              <h3>Zack Weaver | Director</h3>
+              <p class="small-text">Director, BTU Lab | Assistant Teaching Professor, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:zack.weaver@colorado.edu" class="link">zack.weaver@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">I am a wizard with:</p>
+              <ul>
+                <li>General Tools</li>
+                <li>Wood Shop</li>
+                <li>Sewing &amp; Textiles</li>
+                <li>Electronics</li>
+                <li>Lasers (Laser Wizard)</li>
+                <li>3D Printing</li>
+                <li>Shaper CNC</li>
+                <li>Way, way more</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(10).jpg" alt="Bella Consentino">
+              <h3>Bella Consentino | Staff</h3>
+              <p class="small-text">Undergraduate Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:Bella.Consentino@colorado.edu" class="link">Bella.Consentino@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">My skills include:</p>
+              <ul>
+                <li>Woodshop</li>
+                <li>Soldering</li>
+                <li>Lasers (Laser Wizard)</li>
+                <li>General Tools</li>
+                <li>Electronics</li>
+                <li>3D printing</li>
+                <li>Prototyping (SketchUp &amp; Blender specifically)</li>
+                <li>Most of Adobe Suite</li>
+                <li>Programming (C++, Python, JavaScript, Godot, +more)</li>
+                <li>Being fitted up</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(15).jpg" alt="Keturah Dunn">
+              <h3>Keturah Dunn | Staff</h3>
+              <p class="small-text">Undergraduate Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:kedu1409@colorado.edu" class="link">kedu1409@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">My skills include:</p>
+              <ul>
+                <li>3D printing (including multicolor printing)</li>
+                <li>3D modeling</li>
+                <li>Basic Sewing</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(19).jpg" alt="Vani Chhay">
+              <h3>Vani Chhay | Staff</h3>
+              <p class="small-text">Undergraduate Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:Vanica.Chhay@colorado.edu" class="link">Vanica.Chhay@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">My skills include:</p>
+              <ul>
+                <li>General tools</li>
+                <li>Lasers (Laser Wizard)</li>
+                <li>Electronics/Circuits</li>
+                <li>Prototyping Design</li>
+                <li>3D printing</li>
+                <li>Programming (Arduino (+ C++), Processing JS, Python)</li>
+                <li>Sewing</li>
+                <li>Overwatch</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(13).jpg" alt="Terri Hughes">
+              <h3>Terri Hughes | Staff</h3>
+              <p class="small-text">Undergraduate Student, CMCI</p>
+              <p class="small-text"><a href="mailto:Terri.Hughes@colorado.edu" class="link">Terri.Hughes@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">My skills include:</p>
+              <ul>
+                <li>General Tools</li>
+                <li>Sewing (Hand/Stitch + Machine)</li>
+                <li>Dying Fabrics</li>
+                <li>3D Modeling (Autodesk Inventor)</li>
+                <li>Woodshop Tools</li>
+                <li>Soldering</li>
+                <li>Chain Making (Chain Jewelry/Spikes/Studs)</li>
+                <li>Soldering</li>
+                <li>Telling you only the things you want to hear</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(16).jpg" alt="Leo Heuring">
+              <h3>Leo Heuring | Staff</h3>
+              <p class="small-text">Undergraduate Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:Leo.Heuring@colorado.edu" class="link">Leo.Heuring@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">My skills include:</p>
+              <ul>
+                <li>3D Printing (Ask if you want to try something fun on one of the CUID printers)</li>
+                <li>3D Modeling</li>
+                <li>CAD (Solidwork)</li>
+                <li>Soldering</li>
+                <li>Basic PCB design and assembly</li>
+                <li>Programming (Python, Arduino)</li>
+                <li>Fabrication</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(17).jpg" alt="Sage Morgan-LaRosa">
+              <h3>Sage Morgan-LaRosa</h3>
+              <p class="small-text">Undergraduate Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:sage.morgan-larosa@colorado.edu" class="link">sage.morgan-larosa@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">SKill Skillz</p>
+              <ul>
+                <li>3D modeling (feely blender, sketch up)</li>
+                <li>3D printing</li>
+                <li>Coding (C++, Java, python, typescript, csa)</li>
+                <li>General electronics</li>
+                <li>General tools</li>
+                <li>The vast void of nerdism</li>
+              </ul>
+            </div>
+
+          </div>
+
+          <!-- Volunteer & Emeritus Mischief Makers -->
+          <h2 class="section-heading">Volunteer &amp; Emeritus Mischief Makers</h2>
+          <div class="team-grid">
+
+            <div class="card">
+              <img src="unnamed(14).jpg" alt="Danny Rankin">
+              <h3>Danny Rankin</h3>
+              <p class="small-text">Director, Whoaaat! Lab | Assistant Teaching Professor, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:danny.rankin@colorado.edu" class="link">danny.rankin@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">My skills include:</p>
+              <ul>
+                <li>Woodworking</li>
+                <li>General shops skills</li>
+                <li>Laser-cutting (Laser Wizard)</li>
+                <li>Installation design</li>
+                <li>Custom game controllers</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(23).jpg" alt="Autumn Davis">
+              <h3>Autumn Davis</h3>
+              <p class="small-text">Undergraduate Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:autumn.davis@colorado.edu" class="link">autumn.davis@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">My SuperSkillz™ include:</p>
+              <ul>
+                <li>General Tools</li>
+                <li>Sewing (Machine/Hand)</li>
+                <li>Graphic Design &amp; various design software</li>
+                <li>Adobe Suite</li>
+                <li>Gemstone stuff [yay!]</li>
+                <li>Soldering</li>
+                <li>Laser cutting</li>
+                <li>Basic 3d printing/modeling help</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(18).jpg" alt="Lucky Bonniwell">
+              <h3>Lucky Bonniwell</h3>
+              <p class="small-text">Undergraduate Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:thatcher.bonniwell@colorado.edu" class="link">thatcher.bonniwell@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">I can help you with:</p>
+              <ul>
+                <li>laser cutting</li>
+                <li>woodworking</li>
+                <li>general shop skills</li>
+                <li>programming</li>
+                <li>3D Printing</li>
+                <li>soldering</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(23).jpg" alt="Yunessa Rodriguez">
+              <h3>Yunessa Rodriguez</h3>
+              <p class="small-text">Undergraduate Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:Yunessa.Rodriguez@colorado.edu" class="link">Yunessa.Rodriguez@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">I can teach:</p>
+              <ul>
+                <li>Rhino</li>
+                <li>3D Printing</li>
+                <li>Maybe some laser cutter stuff</li>
+                <li>Prototyping</li>
+                <li>And more fun stuffs</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(10).jpg" alt="Jacob Le Mons">
+              <h3>Jacob Le Mons</h3>
+              <p class="small-text">Undergraduate Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:jacob.lemons@colorado.edu" class="link">jacob.lemons@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">My skills include:</p>
+              <ul>
+                <li>Design, Prototyping, Documentation</li>
+                <li>General Tools</li>
+                <li>Lasers</li>
+                <li>3D Modeling (Onshape, SketchUp) &amp; Printing</li>
+                <li>Electronics &amp; Soldering</li>
+                <li>Woodshop &amp; Basic Metalworking</li>
+                <li>Blast Sloving &amp; Weaving</li>
+                <li>Sketching &amp; Graphic Design</li>
+                <li>Programming (C++, Python, HTML, CSS, JS)</li>
+                <li>Japanese Language, Conversational Japanese</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(11).jpg" alt="Pete Burke">
+              <h3>Pete Burke</h3>
+              <p class="small-text">Undergraduate Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:pete.burke-1@colorado.edu" class="link">pete.burke-1@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">My skills include:</p>
+              <ul>
+                <li>3D Modeling (SketchUp, Blender)</li>
+                <li>3D Printing</li>
+                <li>Lasers</li>
+                <li>Woodworking</li>
+                <li>General Tools</li>
+                <li>Adobe Suite</li>
+                <li>Project Documentation</li>
+                <li>Programming (C++, JS)</li>
+                <li>Anything related to D&amp;D</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(12).jpg" alt="Elly Jensen">
+              <h3>Elly Jensen</h3>
+              <p class="small-text">Undergraduate Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:elly.jensen@colorado.edu" class="link">elly.jensen@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">My skills include:</p>
+              <ul>
+                <li>Sewing</li>
+                <li>Adobe creative suite</li>
+                <li>Lasers (Laser Wizard)</li>
+                <li>3D printing</li>
+                <li>General tools</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(13).jpg" alt="Krithik Ranjan">
+              <h3>Krithik Ranjan</h3>
+              <p class="small-text">PhD Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:Krithik.Ranjan@colorado.edu" class="link">Krithik.Ranjan@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">I can help you with:</p>
+              <ul>
+                <li>Electronics</li>
+                <li>Soldering</li>
+                <li>Oscilloscope (or the Dentronics® ElectroScope) and other electrical tools</li>
+                <li>PCB design and assembly</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(14).jpg" alt="Paul Bailey">
+              <h3>Paul Bailey</h3>
+              <p class="small-text">Graduate Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:peba2699@colorado.edu" class="link">peba2699@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">Things I help with:</p>
+              <ul>
+                <li>Laser cutting at dawn (Laser Wizard)</li>
+                <li>Checking your 3D print at midnight</li>
+                <li>GIS (Geographic Information Systems)</li>
+                <li>Corel Draw</li>
+                <li>Kinetic Sculpture Racing</li>
+                <li>Human-powered art vehicles</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(15).jpg" alt="Sena Ucutuk">
+              <h3>Sena Ucutuk <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
+              <p class="small-text">Undergraduate Student, ATLAS Institute, Computer Science</p>
+              <p class="small-text"><a href="mailto:sena.ucutuk@colorado.edu" class="link">sena.ucutuk@colorado.edu</a> | <a href="https://www.linkedin.com/in/sena-ucutuk" class="link" target="_blank">LinkedIn</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">Things I can help with:</p>
+              <ul>
+                <li>Prototyping/modeling</li>
+                <li>3D Printing</li>
+                <li>Laser Cutting (Laser Wizard)</li>
+                <li>Acrylic, Metal and Wood Cut/Etch</li>
+                <li>Laser cutting</li>
+                <li>Electronics</li>
+                <li>Soldering</li>
+                <li>Code C++, Windows, JS, Python</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(16).jpg" alt="Arjun Ramachandran">
+              <h3>Arjun Ramachandran</h3>
+              <p class="small-text">Graduate Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:arjun.ramachandran1@colorado.edu" class="link">arjun.ramachandran1@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">Things I'm good at:</p>
+              <ul>
+                <li>General Tools</li>
+                <li>Electronics/Circuits</li>
+                <li>Woodworking/Shop</li>
+                <li>Rapid Prototyping/Fabrication</li>
+                <li>Robotics</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(17).jpg" alt="Bart Baker">
+              <h3>Bart Baker <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
+              <p class="small-text">Undergraduate Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:Bartholomew.baker@colorado.edu" class="link">Bartholomew.baker@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">I can make your life better in:</p>
+              <ul>
+                <li>Woodworking</li>
+                <li>Fabrication</li>
+                <li>Laser-cutting</li>
+                <li>Soldering</li>
+                <li>Speakers</li>
+                <li>Cryptic Design</li>
+                <li>Materials/Design</li>
+                <li>All things music!</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(18).jpg" alt="Xin Wen">
+              <h3>Xin Wen</h3>
+              <p class="small-text">PhD Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:xin.wen01@colorado.edu" class="link">xin.wen01@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">I am happy to help you with:</p>
+              <ul>
+                <li>Sewing &amp; Textiles</li>
+                <li>Electronics</li>
+                <li>Laser Wizard</li>
+                <li>3D Printing (I've driven instructors insane with needing to do BTU 3D printing training)</li>
+                <li>Programming</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(19).jpg" alt="Ashley Stafford">
+              <h3>Ashley Stafford <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
+              <p class="small-text">Undergraduate Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:Ashley.Stafford@colorado.edu" class="link">Ashley.Stafford@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">SPRING '25 STAFF</p>
+              <p class="body-text" style="margin-top: 4px; font-weight: 600;">Things I know:</p>
+              <ul>
+                <li>General Tools</li>
+                <li>Lasers (Laser Wizard)</li>
+                <li>Sewing</li>
+                <li>3D Printing</li>
+                <li>Basic Electronics</li>
+                <li>The Honors</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(32).jpg" alt="Kai Adamchak">
+              <h3>Kai Adamchak <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
+              <p class="small-text">Undergraduate Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:kai.adamchak@colorado.edu" class="link">kai.adamchak@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">Things I Can Help With</p>
+              <ul>
+                <li>3D modeling</li>
+                <li>Adobe</li>
+                <li>Procreate/Digital Art</li>
+                <li>Prototyping</li>
+                <li>Artsy Stuff</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(21).jpg" alt="Sophie Berry">
+              <h3>Sophie Berry <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
+              <p class="small-text">Undergraduate Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:sophie.berry@colorado.edu" class="link">sophie.berry@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">SPRING '25 STAFF</p>
+              <p class="body-text" style="margin-top: 4px; font-weight: 600;">Things I can help with:</p>
+              <ul>
+                <li>Prototyping/ modeling</li>
+                <li>3D printing</li>
+                <li>Lasers (Laser Wizard)</li>
+                <li>General tools</li>
+                <li>Soldering</li>
+                <li>Electronics</li>
+                <li>Basics sewing machine stuff</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(22).jpg" alt="Kaya Walker">
+              <h3>Kaya Walker <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
+              <p class="small-text">Undergraduate Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:kaya.walker@colorado.edu" class="link">kaya.walker@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">I like to help people with:</p>
+              <ul>
+                <li>General Tools</li>
+                <li>Sewing &amp; Textiles</li>
+                <li>LASERS!</li>
+                <li>Electronics</li>
+                <li>Ceramics</li>
+                <li>ATLAS Social Media [LMK if you make cool things!]</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(23).jpg" alt="Nefeli Hadjiyiannis">
+              <h3>Nefeli Hadjiyiannis <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
+              <p class="small-text">Undergraduate Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:nefeli.hadjiyiannis@colorado.edu" class="link">nefeli.hadjiyiannis@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">I'm here to help you with:</p>
+              <ul>
+                <li>Sewing/Textiles</li>
+                <li>Woodshop</li>
+                <li>Adobe &amp; Animation</li>
+                <li>Soldering</li>
+                <li>Simple Electronics</li>
+                <li>Laser-Cutting</li>
+                <li>General Tools</li>
+                <li>Vibe</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(24).jpg" alt="Andrew Widner">
+              <h3>Andrew Widner <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
+              <p class="small-text">Undergraduate Student, CUID President, ATLAS Ambassador</p>
+              <p class="body-text" style="font-weight: 600;">Head 3D Printer Wizard</p>
+              <p class="small-text"><a href="mailto:anwi5861@colorado.edu" class="link">anwi5861@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">My office hours are Tuesdays 12-2 PM. If you are a member of the CUID, please reach out if you want to know how/want to know how to 3D print your works! Reach out to me too!</p>
+              <p class="body-text" style="font-weight: 600;">I would be happy to help with:</p>
+              <ul>
+                <li>Advanced 3D printing</li>
+                <li>CAD (Fusion/Onshape)</li>
+                <li>3D Modeling / Digital sculpting</li>
+                <li>Model rendering / Animation</li>
+                <li>Everything Blender</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(33).jpg" alt="Quinn Pearson">
+              <h3>Quinn Pearson</h3>
+              <p class="small-text">Undergraduate Student, ATLAS Institute</p>
+              <p class="body-text" style="font-weight: 600;">FALL '24 STAFF</p>
+              <p class="small-text"><a href="mailto:Quinn.Pearson@colorado.edu" class="link">Quinn.Pearson@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">Things you can help with:</p>
+              <ul>
+                <li>Lasers</li>
+                <li>3D Printing</li>
+                <li>General tools</li>
+                <li>Woodworking</li>
+                <li>Soldering</li>
+                <li>Creative problem solving</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(26).jpg" alt="Perry Owens">
+              <h3>Perry Owens</h3>
+              <p class="small-text">Graduate Student, ATLAS Institute</p>
+              <p class="body-text" style="font-weight: 600;">SPRING '24 STAFF</p>
+              <p class="small-text"><a href="mailto:Perry.Owens@colorado.edu" class="link">Perry.Owens@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">I work magic with:</p>
+              <ul>
+                <li>Woodshop</li>
+                <li>Lasers</li>
+                <li>3D modeling</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(27).jpg" alt="Zoe Turner">
+              <h3>Zoe Turner</h3>
+              <p class="small-text">Undergraduate, ENVD</p>
+              <p class="body-text" style="font-weight: 600;">SPRING '24 STAFF</p>
+              <p class="small-text"><a href="mailto:zotu6244@colorado.edu" class="link">zotu6244@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">Skills I can help you with:</p>
+              <ul>
+                <li>Textiles and sewing</li>
+                <li>Laser cutting</li>
+                <li>3D Printing (and troubleshooting)</li>
+                <li>Woodworking and hand tools</li>
+                <li>Soldering</li>
+                <li>Photography</li>
+                <li>Model drafting and rendering</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(28).jpg" alt="Atlas Zaina">
+              <h3>Atlas Zaina <span style="font-size: 0.8rem; font-weight: normal;">(∞)</span></h3>
+              <p class="small-text">Undergraduate Student, ATLAS Institute</p>
+              <p class="body-text" style="font-weight: 600;">SPRING '24 STAFF</p>
+              <p class="small-text"><a href="mailto:Atlas.Zaina@colorado.edu" class="link">Atlas.Zaina@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">I am a wizard with:</p>
+              <ul>
+                <li>General Tools</li>
+                <li>Wood Shop</li>
+                <li>Sewing</li>
+                <li>Lasers</li>
+                <li>Fabulous little crafts and more!</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(29).jpg" alt="Kai Hughes">
+              <h3>Kai Hughes</h3>
+              <p class="small-text"><a href="mailto:kai.hughes@colorado.edu" class="link">kai.hughes@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">I am very good at:</p>
+              <ul>
+                <li>3D printing and 3D modeling</li>
+                <li>Digital art and graphic design</li>
+                <li>Woodshop stuff</li>
+                <li>General tool magic</li>
+                <li>Resin casting / casting</li>
+                <li>Creating problems</li>
+                <li>Solving problems</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(30).jpg" alt="Jeremiah Klinkerman">
+              <h3>Jeremiah Klinkerman <span style="font-size: 0.8rem; font-weight: normal;">(Image approximate)</span></h3>
+              <p class="small-text">Undergraduate Student, Dinosaur Studies</p>
+              <p class="body-text" style="font-weight: 600;">SPRING '24 STAFF</p>
+              <p class="small-text"><a href="mailto:jeremiah.klinkerman@colorado.edu" class="link">jeremiah.klinkerman@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">Things I can help with:</p>
+              <ul>
+                <li>General Tools</li>
+                <li>Wood Shop</li>
+                <li>3D Printing</li>
+                <li>3D Sculptors</li>
+                <li>Dinosaurs &amp; Rocks</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(31).jpg" alt="Hunter Allen-Bonney">
+              <h3>Hunter Allen-Bonney</h3>
+              <p class="small-text">Graduate Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:hunter.allenbonney@colorado.edu" class="link">hunter.allenbonney@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">Ask me about:</p>
+              <ul>
+                <li>Photography</li>
+                <li>Documentation</li>
+                <li>ATLAS Social Media</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(32).jpg" alt="S Wu">
+              <h3>S Wu <span style="font-size: 0.8rem; font-weight: normal;">[currently in Canada]</span></h3>
+              <p class="small-text">PhD Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:shanshan.wu@colorado.edu" class="link">shanshan.wu@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">Ask me about:</p>
+              <ul>
+                <li>Anything textiles/sewing</li>
+                <li>Electronics + circuits</li>
+                <li>General tools</li>
+                <li>Programming code</li>
+                <li>Brainstorming + prototyping</li>
+                <li>How to survive academic writing</li>
+                <li>A strange enactment of many other things</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(33).jpg" alt="McClain Martensen">
+              <h3>McClain Martensen <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
+              <p class="small-text">Undergraduate Student, ATLAS Institute</p>
+              <p class="small-text"><a href="mailto:moma9500@colorado.edu" class="link">moma9500@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">Things I know:</p>
+              <ul>
+                <li>Wood Shop</li>
+                <li>3D modeling</li>
+                <li>Lasers</li>
+                <li>Electronics/Soldering</li>
+                <li>Sewing/Textiles</li>
+                <li>Prototyping</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(34).jpg" alt="Gray Assi">
+              <h3>Gray Assi <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
+              <p class="small-text">CUID Undergraduate Student, ATLAS Ambassador</p>
+              <p class="small-text"><a href="mailto:gray.assi@colorado.edu" class="link">gray.assi@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">Ask me about:</p>
+              <ul>
+                <li>prototyping</li>
+                <li>experience design</li>
+                <li>sewing + textiles</li>
+                <li>woodworking + electronics</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(35).jpg" alt="Hi! I'm Dover Horesh">
+              <h3>Hi! I'm Dover Horesh <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
+              <p class="small-text"><a href="mailto:dho2148@colorado.edu" class="link">dho2148@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">I work magic with:</p>
+              <ul>
+                <li>Laser Cutter-Laser Wizard</li>
+                <li>Wood Shop</li>
+                <li>Sewing Machine</li>
+                <li>Photography</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <img src="unnamed(36).jpg" alt="Katie Gilchrist">
+              <h3>Katie Gilchrist <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
+              <p class="small-text"><a href="mailto:kagi3666@colorado.edu" class="link">kagi3666@colorado.edu</a></p>
+              <p class="body-text" style="margin-top: 8px; font-weight: 600;">I can do the things:</p>
+              <ul>
+                <li>Basic Tools</li>
+                <li>Soldering &amp; Electronics</li>
+                <li>Lasers</li>
+                <li>3D Modeling</li>
+                <li>Make it lookboard</li>
+              </ul>
+            </div>
+
+          </div>
+        </article>
+      </main>
+
+      <!-- Footer Section -->
+      <footer>
+        <p class="small-text">©Copyright 2026 by nobody. All rights reversed. This is an imitation website for the CU Boulder ATLAS BTU.</p>
+      </footer>
+
     </div>
-
-    <div class="nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Tools</a></li>
-        <li><a href="#">Wood Shop</a></li>
-        <li><a href="#">Sewing & Textiles</a></li>
-        <li><a href="#">Electronics</a></li>
-        <li><a href="#">Lasers</a></li>
-        <li><a href="#">3D Printers</a></li>
-        <li><a href="#">CNC</a></li>
-        <li><a href="#">BTU Mischief Makers</a></li>
-        <li><a href="#">BTU Lab Calendar</a></li>
-        <li><a href="#">Lab Rules & Policies</a></li>
-        <li><a href="#">Workshops</a></li>
-        <li><a href="#">Help Us Blow Things Up</a></li>
-        <li><a href="#">Sewing & Textiles</a></li>
-      </ul>
-
-      <form class="search">
-        <input type="search" name="q" placeholder="Search">
-        <input type="submit" value="Go!">
-      </form>
-    </div>
-
-    <main>
-      <article>
-        <h1>BTU Mischief Makers</h1>
-        
-       
-
-        <h2>Placeholder</h2>
-        
-
-
-        <aside>
-        
-        </aside>
-      </article>
-    </main>
-
-    <footer>
-      <p>©Copyright 2026 by nobody. All rights reversed. This is an immitation website for the CU Boulder ATLAS BTU. </p>
-    </footer>
-
   </body>
 </html>
