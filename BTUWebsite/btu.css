@@ -1,19 +1,31 @@
+/* ==========================================================================
+   ATLAS BTU LAB - GLOBAL DESIGN SYSTEM & STYLESHEET (btu.css)
+   ========================================================================== */
+
+/* 1. CSS Reset & Base Defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
-    /* Color Palette - 5 Core Colors */
-    --color-primary: #231F20;     /* Vibrant Blue - Main Brand Color */
-    --color-secondary: #BB4430;   /* Emerald Green - Complementary Action Color */
-    --color-accent: #007991;      /* Passionate Red - Highlight / Warning Color */
-    --color-neutral: #2D5C35;     /* Deep Slate Gray - Neutral Text and Background */
-    --color-highlight: #FF9F1C;   /* Bright Yellow - Accent / Attention Color */
+    /* Color Palette - Core Brand Colors */
+    --color-primary: #231F20;     /* Dark Slate/Black - Main Brand Color */
+    --color-secondary: #BB4430;   /* Rust Red - Action/Heading Accent */
+    --color-accent: #007991;      /* Deep Teal - Highlight Color */
+    --color-neutral: #2D5C35;     /* Forest Green - Secondary Text/Neutral */
+    --color-highlight: #FF9F1C;   /* Warm Orange - Attention Color */
     
-    /* Derived Colors for Flexibility */
+    /* Derived Colors */
     --color-background: color-mix(in srgb, var(--color-neutral) 10%, #F7F7E7);
     --color-text-dark: var(--color-neutral);
     --color-text-light: #ffffff;
 
-    /* Typography */
+    /* Typography Families */
     --font-primary: 'Bebas Neue', sans-serif;
     --font-secondary: 'Commissioner', sans-serif;
+    --font-body-alt: 'Geologica', sans-serif;
 
     /* Spacing System */
     --spacing-xs: 0.25rem;
@@ -22,164 +34,258 @@
     --spacing-lg: 1.5rem;
     --spacing-xl: 2rem;
 
-    /* Border Radius */
+    /* Border Radius System */
     --radius-sm: 4px;
     --radius-md: 8px;
     --radius-lg: 12px;
 }
 
+/* 2. Global Base Styles */
+body {
+    font-family: var(--font-secondary);
+    line-height: 1.6;
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+    padding: var(--spacing-xl);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titleLogo {
+    width: 100px;
+}
+
+/* 3. Typography Styles */
+h1 {
+    font-family: var(--font-primary);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--color-secondary);
+}
+
+h3 {
+    font-family: var(--font-primary);
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-accent);
+}
+
+.body-text {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.small-text {
+    font-size: 0.8rem;
+    color: color-mix(in srgb, var(--color-text-dark) 85%, transparent);
+}
+
+/* Typography Utility Classes */
 .bebas-neue-regular {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: var(--font-primary);
     font-weight: 600;
     font-style: normal;
-    }
+}
 
-
-    .geologica-bodyfont {
-    font-family: "Geologica", sans-serif;
+.geologica-bodyfont {
+    font-family: var(--font-body-alt);
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-variation-settings:
-        "slnt" 0,
-        "CRSV" 0,
-        "SHRP" 0;
-    }
+    font-variation-settings: "slnt" 0, "CRSV" 0, "SHRP" 0;
+}
 
-    .commissioner-mainfont {
-    font-family: "Commissioner", sans-serif;
-    /*font-optical-sizing: auto;*/
+.commissioner-mainfont {
+    font-family: var(--font-secondary);
     font-weight: 400;
     font-style: normal;
-    font-variation-settings:
-        "slnt" 0,
-        "FLAR" 0,
-        "VOLM" 0;
-    }
+    font-variation-settings: "slnt" 0, "FLAR" 0, "VOLM" 0;
+}
 
+/* 4. Interactive Components (Buttons & Links) */
+.button {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    transition: background-color 0.3s ease, transform 0.2s;
+    border: 2px solid transparent;
+    font-family: var(--font-secondary);
+    font-weight: 600;
+}
 
-    body {
-        font-family: var(--font-secondary);
-        line-height: 1.6;
-        background-color: var(--color-background);
-        color: var(--color-text-dark);
-        padding: var(--spacing-xl);
-    }
+.button:hover {
+    background-color: color-mix(in srgb, var(--color-primary) 80%, black);
+    border-color: var(--color-secondary);
+    transform: scale(1.05);
+}
 
-    .nav {
-        flex-direction: row;
-    }
+.button:active {
+    transform: scale(0.95);
+    background-color: var(--color-secondary);
+}
 
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
+.link {
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration-color 0.3s;
+}
 
-    .titleLogo {
-        width: 100px;
-    }
+.link:hover {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-decoration-color: var(--color-highlight);
+}
 
-    /* Typography Styles */
-    h1 {
-        font-family: var(--font-primary);
-        font-size: 5rem;
-        font-weight: 700;
-        margin-bottom: var(--spacing-md);
-        color: var(--color-primary);
-    }
+.link:visited {
+    color: var(--color-neutral);
+}
 
-    h2 {
-        font-family: var(--font-primary);
-        font-size: 3rem;
-        font-weight: 600;
-        margin-bottom: var(--spacing-md);
-        color: var(--color-secondary);
-    }
+/* 5. Header, Navigation & Hero Sections */
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-md);
+}
 
-    h3 {
-        font-family: var(--font-primary);
-        font-size: 2rem;
-        font-weight: 500;
-        margin-bottom: var(--spacing-sm);
-        color: var(--color-accent);
-    }
+.hero-banner {
+    position: relative;
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('unnamed(10).jpg');
+    background-size: cover;
+    background-position: center;
+    padding: var(--spacing-xl) 0;
+    margin-bottom: var(--spacing-xl);
+    border-radius: var(--radius-md);
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
 
-    .body-text {
-        font-size: 1rem;
-        margin-bottom: var(--spacing-md);
-    }
+.hero-title-box {
+    background-color: rgba(0, 121, 145, 0.85); /* Accent teal tint */
+    color: var(--color-text-light);
+    padding: var(--spacing-md) var(--spacing-lg);
+    display: inline-block;
+    border-radius: var(--radius-sm);
+}
 
-    .small-text {
-        font-size: 0.75rem;
-        color: color-mix(in srgb, var(--color-text-dark) 85%, transparent);
-    }
+.hero-title-box h1 {
+    color: var(--color-text-light);
+    margin: 0;
+}
 
-    /* Color Palette Section */
-    .color-palette {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: var(--spacing-md);
-        margin-bottom: var(--spacing-xl);
-    }
+.intro-section {
+    background-color: #ffffff;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-xl);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
 
-    .color-swatch {
-        padding: var(--spacing-md);
-        border-radius: var(--radius-md);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
+.section-heading {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: var(--spacing-xs);
+}
 
-    /* Component Styles */
-    .button {
-        display: inline-block;
-        padding: var(--spacing-sm) var(--spacing-md);
-        background-color: var(--color-primary);
-        color: var(--color-text-light);
-        text-decoration: none;
-        border-radius: var(--radius-sm);
-        transition: background-color 0.3s ease, transform 0.2s;
-        border: 2px solid transparent;
-    }
+/* 6. Card & Grid Components */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
 
-    .button:hover {
-        background-color: color-mix(in srgb, var(--color-primary) 80%, black);
-        border-color: var(--color-secondary);
-        transform: scale(1.05);
-    }
+.card {
+    background-color: #ffffff;
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    transition: transform 0.2s ease;
+}
 
-    .button:active {
-        transform: scale(0.95);
-        background-color: var(--color-secondary);
-    }
+.card:hover {
+    transform: translateY(-4px);
+}
 
-    .link {
-        color: var(--color-secondary);
-        text-decoration: none;
-        transition: color 0.3s ease, text-decoration-color 0.3s;
-    }
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-md);
+}
 
-    .link:hover {
-        color: var(--color-accent);
-        text-decoration: underline;
-        text-decoration-color: var(--color-highlight);
-    }
+.card h3 {
+    margin-bottom: var(--spacing-xs);
+}
 
-    .link:visited {
-        color: var(--color-neutral);
-    }
+.card ul {
+    margin: var(--spacing-xs) 0 0 var(--spacing-md);
+    padding: 0;
+    font-size: 0.9rem;
+}
 
-    /* Spacing Demonstration */
-    .spacing-demo {
-        display: flex;
-        align-items: center;
-        gap: var(--spacing-sm);
-        margin-bottom: var(--spacing-md);
-    }
+.card li {
+    margin-bottom: 2px;
+}
 
-    .spacing-block {
-        background-color: var(--color-primary);
-        height: 50px;
-    }
+/* 7. Design System Swatches & Spacing Demos */
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.color-swatch {
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.spacing-demo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.spacing-block {
+    background-color: var(--color-primary);
+    height: 50px;
+}
+
+/* 8. Global Footer */
+footer {
+    margin-top: var(--spacing-xl);
+    padding-top: var(--spacing-md);
+    border-top: 1px solid color-mix(in srgb, var(--color-neutral) 20%, transparent);
+    text-align: center;
+}
