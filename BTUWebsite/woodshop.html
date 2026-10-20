@@ -1,223 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wood Shop</title>
-<link rel="stylesheet" href="style.css">
-<style>
-  body{
-
-    font-family:
-    "Inter",
-    "Segoe UI",
-    sans-serif;
-
-    line-height:1.6;
-
-    background:#f7f7f7;
-}
-  .alert-banner{
-    background:#e85b56;
-    color:white;
-
-    text-align:center;
-
-    padding:18px;
-
-    font-size:1.1rem;
-    font-weight:bold;
-}
-.intro-card{
-
-    background:white;
-
-    max-width:1100px;
-
-    margin:-40px auto 40px;
-
-    padding:30px;
-
-    border-radius:12px;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
-}
-.register-btn{
-
-    display:inline-block;
-
-    margin-top:15px;
-
-    background:#2286c3;
-
-    color:white;
-
-    text-decoration:none;
-
-    padding:14px 28px;
-
-    border-radius:6px;
-
-    font-weight:600;
-}
-.equipment-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
-
-    gap:20px;
-
-    padding:40px;
-}
-
-.equip-card{
-
-    background:white;
-
-    border-radius:12px;
-
-    padding:25px;
-
-    text-align:center;
-
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
-}
-.safety-box{
-
-    background:#fff6f4;
-
-    border-left:6px solid #e85b56;
-
-    padding:35px;
-
-    margin:40px;
-
-    border-radius:8px;
-}
-</style>
-</head>
-<body>
-
-<!-- HERO -->
-
-<header class="hero">
-
-    <div class="overlay">
-
-        <h1>Wood Shop</h1>
-
-        <p class="hero-subtitle">
-            Learn. Build. Create.
-        </p>
-
-        <a href="#" class="cta-button">
-            Register for Orientation
-        </a>
-
-    </div>
-
-</header>
-
-<!-- INTRO -->
- <section class="alert-banner">
-
-    ⚠ Orientation Required Before Using Equipment
-
-</section>
-
-<section class="intro-card">
-
-    <h2>Getting Started</h2>
-
-    <ul>
-        <li>✅ Entrance marked in PINK</li>
-        <li>✅ Orientation required</li>
-        <li>✅ Open to BTU members</li>
-        <li>✅ Tools use color-coded organization</li>
-    </ul>
-
-</section>
-
-
-<!-- INFO -->
-
-<section class="info">
-    <p>
-        Access to certain machines is facilitated by BTU "Mischief Makers".
-    </p>
-
-    <p>
-        WOOD SHOP access is separate from general BTU access and requires an orientation.
-    </p>
-
-    <p>
-        For your safety, major equipment including table saw, band saw, belt sander,
-        chop saw, and drill press are powered off between 10pm and 6am daily.
-    </p>
-</section>
-
-<!-- MAIN CONTENT -->
-
-<div class="orientation-box">
-
-    <h2>Register for Orientation</h2>
-
-    <p>
-        Access to major equipment requires orientation.
-    </p>
-
-    <a href="#" class="register-btn">
-        View Calendar
-    </a>
-
-</div>
-
-<!-- EQUIPMENT -->
-
-<section class="equipment-grid">
-
-    <div class="equip-card">
-        <h3>Saws</h3>
-        <p>Table Saw, Band Saw, Chop Saw</p>
-    </div>
-
-    <div class="equip-card">
-        <h3>Sanders</h3>
-        <p>Belt Sander, Orbital Sander</p>
-    </div>
-
-    <div class="equip-card">
-        <h3>Power Tools</h3>
-        <p>Routers, Drills, Drivers</p>
-    </div>
-
-    <div class="equip-card">
-        <h3>Hand Tools</h3>
-        <p>Saws, Files, Measuring Tools</p>
-    </div>
-
-</section>
-
-
-<!-- POLICIES -->
-
-<section class="safety-box">
-
-    <h2>Safety Requirements</h2>
-
-    <ul>
-        <li>Orientation required.</li>
-        <li>No operating unfamiliar equipment.</li>
-        <li>Do not work alone if assistance may be required.</li>
-        <li>Do not modify machines.</li>
-        <li>Major equipment powers down from 10 PM to 6 AM.</li>
-    </ul>
-
-</section>
-
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATLAS | BTU Lab - Wood Shop</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Commissioner:wght@100..900&family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="btu.css">
+
+    <style>
+      .hero-banner {
+        position: relative;
+        background: linear-gradient(rgba(232, 91, 86, 0.55), rgba(232, 91, 86, 0.55)), url('assets/wood-shop.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: var(--spacing-xl) 0;
+        margin-bottom: var(--spacing-xl);
+        border-radius: var(--radius-md);
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      }
+
+      .hero-title-box {
+        background-color: rgba(15, 57, 23, 0.75);
+        color: var(--color-text-light);
+        padding: var(--spacing-md) var(--spacing-lg);
+        display: inline-block;
+        border-radius: var(--radius-sm);
+        margin-bottom: var(--spacing-md);
+      }
+
+      .hero-title-box h1 {
+        font-family: var(--font-primary);
+        font-size: 3.5rem;
+        margin: 0;
+        color: var(--color-text-light);
+        letter-spacing: 1px;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 14px 28px;
+        background: white;
+        color: #2286c3;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: .3s;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .alert-banner {
+        background: #e85b56;
+        color: white;
+        text-align: center;
+        padding: 18px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-radius: var(--radius-sm);
+        margin-bottom: var(--spacing-xl);
+      }
+
+      .intro-card {
+        background: white;
+        max-width: 1100px;
+        margin: 0 auto var(--spacing-xl);
+        padding: 35px;
+        border-radius: var(--radius-md);
+        box-shadow: 0 8px 25px rgba(0,0,0,.08);
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+      }
+
+      .intro-card h2 {
+        color: #e85b56;
+        margin-bottom: 20px;
+        font-family: var(--font-primary);
+        font-size: 2rem;
+      }
+
+      .intro-card ul {
+        margin: 0;
+        padding-left: var(--spacing-md);
+        line-height: 1.8;
+      }
+
+      .info-section {
+        background: white;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-md);
+      }
+
+      .orientation-box {
+        background: white;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+        text-align: center;
+      }
+
+      .orientation-box h2 {
+        font-family: var(--font-primary);
+        font-size: 2.2rem;
+        color: var(--color-secondary);
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .register-btn {
+        display: inline-block;
+        margin-top: 15px;
+        background: #2286c3;
+        color: white;
+        text-decoration: none;
+        padding: 14px 28px;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: .3s;
+      }
+
+      .register-btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .equipment-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: var(--spacing-lg);
+        margin-bottom: var(--spacing-xl);
+      }
+
+      .equip-card {
+        background: white;
+        border-radius: var(--radius-md);
+        padding: 25px;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0,0,0,.08);
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+        transition: transform 0.2s ease;
+      }
+
+      .equip-card:hover {
+        transform: translateY(-4px);
+      }
+
+      .equip-card h3 {
+        color: var(--color-primary);
+        margin-bottom: var(--spacing-xs);
+        font-family: var(--font-primary);
+        font-size: 1.5rem;
+      }
+
+      .safety-box {
+        background: #fff6f4;
+        border-left: 6px solid #e85b56;
+        padding: 35px;
+        margin-bottom: var(--spacing-xl);
+        border-radius: var(--radius-md);
+      }
+
+      .safety-box h2 {
+        font-family: var(--font-primary);
+        font-size: 2rem;
+        color: #e85b56;
+        margin-bottom: var(--spacing-md);
+      }
+
+      .safety-box ul {
+        margin: 0;
+        padding-left: var(--spacing-md);
+        line-height: 1.8;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <section class="container">
+
+      <!-- HERO -->
+      <header class="hero-banner">
+        <section class="hero-title-box">
+          <h1>Wood Shop</h1>
+        </section>
+        <div>
+          <a href="calendar.html" class="cta-button">Register for Orientation</a>
+        </div>
+      </header>
+
+      <main>
+        <article>
+          <!-- INTRO -->
+          <section class="alert-banner">
+            <p>⚠ Orientation Required Before Using Equipment</p>
+          </section>
+
+          <section class="intro-card">
+            <h2>Getting Started</h2>
+            <ul>
+              <li>✅ Entrance marked in PINK</li>
+              <li>✅ Orientation required</li>
+              <li>✅ Open to BTU members</li>
+              <li>✅ Tools use color-coded organization</li>
+            </ul>
+          </section>
+
+          <!-- INFO -->
+          <section class="info-section">
+            <p class="body-text">
+                Access to certain machines is facilitated by BTU "Mischief Makers".
+            </p>
+            <p class="body-text">
+                WOOD SHOP access is separate from general BTU access and requires an orientation.
+            </p>
+            <p class="body-text">
+                For your safety, major equipment including table saw, band saw, belt sander,
+                chop saw, and drill press are powered off between 10pm and 6am daily.
+            </p>
+          </section>
+
+          <!-- MAIN CONTENT -->
+          <section class="orientation-box">
+            <h2>Register for Orientation</h2>
+            <p class="body-text">
+                Access to major equipment requires orientation.
+            </p>
+            <a href="calendar.html" class="register-btn">
+                View Calendar
+            </a>
+          </section>
+
+          <!-- EQUIPMENT -->
+          <section class="equipment-grid">
+            <article class="equip-card">
+                <h3>Saws</h3>
+                <p class="small-text">Table Saw, Band Saw, Chop Saw</p>
+            </article>
+
+            <article class="equip-card">
+                <h3>Sanders</h3>
+                <p class="small-text">Belt Sander, Orbital Sander</p>
+            </article>
+
+            <article class="equip-card">
+                <h3>Power Tools</h3>
+                <p class="small-text">Routers, Drills, Drivers</p>
+            </article>
+
+            <article class="equip-card">
+                <h3>Hand Tools</h3>
+                <p class="small-text">Saws, Files, Measuring Tools</p>
+            </article>
+          </section>
+
+          <!-- POLICIES -->
+          <section class="safety-box">
+            <h2>Safety Requirements</h2>
+            <ul>
+                <li class="small-text">Orientation required.</li>
+                <li class="small-text">No operating unfamiliar equipment.</li>
+                <li class="small-text">Do not work alone if assistance may be required.</li>
+                <li class="small-text">Do not modify machines.</li>
+                <li class="small-text">Major equipment powers down from 10 PM to 6 AM.</li>
+            </ul>
+          </section>
+        </article>
+      </main>
+
+    </section>
+  </body>
 </html>
-
-

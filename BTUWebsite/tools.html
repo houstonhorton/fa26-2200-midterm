@@ -1,305 +1,282 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATLAS | BTU Lab - Tools</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Commissioner:wght@100..900&family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
 
-    <title>ATLAS | BTU Lab</title>
-    <!-- comment here <link href="" rel="stylesheet" type="text/css"> -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="btu.css">
+
     <style>
-      *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+      .hero-banner {
+        position: relative;
+        background: linear-gradient(rgba(55, 190, 90, 0.55), rgba(55, 190, 90, 0.55)), url('assets/tools-banner.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: var(--spacing-xl) 0;
+        margin-bottom: var(--spacing-xl);
+        border-radius: var(--radius-md);
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      }
 
-body{
-    font-family:"Segoe UI",sans-serif;
-    background:#f7f7f7;
-    color:#333;
-    line-height:1.6;
-}
+      .hero-title-box {
+        background-color: rgba(15, 57, 23, 0.75);
+        color: var(--color-text-light);
+        padding: var(--spacing-md) var(--spacing-lg);
+        display: inline-block;
+        border-radius: var(--radius-sm);
+      }
 
-.hero{
-    height:400px;
-    background:
-    linear-gradient(
-    rgba(55,190,90,.55),
-    rgba(55,190,90,.55)),
-    url("tools-banner.jpg");
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-}
+      .hero-title-box h1 {
+        font-family: var(--font-primary);
+        font-size: 3.5rem;
+        margin: 0;
+        color: var(--color-text-light);
+        letter-spacing: 1px;
+      }
 
-.hero-content h1{
-    font-size:4rem;
-    color:#0f3917;
-}
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
 
-.hero-content p{
-    color:white;
-    font-size:1.2rem;
-    margin:15px 0;
-}
+      .quickstart-section {
+        background-color: #ffffff;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+        text-align: center;
+      }
 
-.btn{
-    display:inline-block;
-    padding:14px 28px;
-    background:white;
-    color:#22a652;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:600;
-    transition:.3s;
-}
+      .quickstart-subheading {
+        font-family: var(--font-primary);
+        font-size: 1.5rem;
+        color: #2ab552;
+        margin-bottom: var(--spacing-md);
+      }
 
-.btn:hover{
-    transform:translateY(-2px);
-}
+      .feature-section {
+        background-color: #ffffff;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: var(--spacing-xl);
+        align-items: center;
+      }
 
-.quickstart{
-    max-width:1100px;
-    margin:-50px auto 50px;
-    background:white;
-    padding:35px;
-    border-radius:15px;
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
-}
+      .feature-image-box img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        border-radius: var(--radius-sm);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      }
 
-.quickstart h2{
-    margin-bottom:20px;
-    color:#2cab52;
-}
+      .feature-text-box h2 {
+        font-family: var(--font-primary);
+        font-size: 2.5rem;
+        color: var(--color-secondary);
+        margin-top: 0;
+        margin-bottom: var(--spacing-md);
+      }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:15px;
-}
+      .feature-text-box p {
+        margin-bottom: var(--spacing-md);
+        line-height: 1.6;
+      }
 
-.cards div{
-    background:#f3fff6;
-    padding:15px;
-    border-radius:8px;
-}
+      .materials-section {
+        background-color: #f0fff4;
+        border-left: 6px solid #2cab52;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-sm);
+        margin-bottom: var(--spacing-xl);
+      }
 
-.feature{
-    max-width:1200px;
-    margin:auto;
-    padding:60px 20px;
-    display:flex;
-    gap:40px;
-    align-items:center;
-}
+      .materials-section h2 {
+        font-family: var(--font-primary);
+        font-size: 1.8rem;
+        color: #2cab52;
+        margin-top: 0;
+        margin-bottom: var(--spacing-xs);
+      }
 
-.feature img{
-    width:400px;
-    max-width:100%;
-    border-radius:12px;
-}
+      .equipment-section {
+        background-color: #ffffff;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+      }
 
-.feature-text h2{
-    color:#2286c3;
-    margin-bottom:20px;
-    font-size:2.5rem;
-}
+      .equipment-section h2 {
+        font-family: var(--font-primary);
+        font-size: 2rem;
+        color: var(--color-secondary);
+        margin-bottom: var(--spacing-md);
+      }
 
-.materials{
-    max-width:1100px;
-    margin:0 auto 60px;
-    background:#f0fff4;
-    border-left:6px solid #2cab52;
-    padding:30px;
-    border-radius:8px;
-}
+      .equipment-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--spacing-lg);
+      }
 
-.materials h2{
-    color:#2cab52;
-    margin-bottom:10px;
-}
+      .equipment-column ul {
+        margin: 0;
+        padding-left: var(--spacing-md);
+        line-height: 1.8;
+      }
 
-.equipment{
-    max-width:1200px;
-    margin:auto;
-    padding:20px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
+      .equipment-column li {
+        margin-bottom: 4px;
+        font-size: 0.95rem;
+      }
 
-.card{
-    background:white;
-    padding:30px;
-    border-radius:14px;
-    box-shadow:0 5px 18px rgba(0,0,0,.08);
-    transition:.3s;
-}
+      .stats-section {
+        background-color: #2cab52;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        padding: var(--spacing-xl) var(--spacing-md);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+      }
 
-.card:hover{
-    transform:translateY(-5px);
-}
+      .stats-section h2 {
+        font-family: var(--font-primary);
+        font-size: 3rem;
+        margin: 0;
+      }
 
-.card h3{
-    color:#2cab52;
-    margin-bottom:15px;
-}
+      footer {
+        margin-top: var(--spacing-xl);
+        padding-top: var(--spacing-md);
+        border-top: 1px solid color-mix(in srgb, var(--color-neutral) 20%, transparent);
+        text-align: center;
+        padding-bottom: var(--spacing-xl);
+      }
 
-.stats{
-    margin-top:60px;
-    background:#2cab52;
-    color:white;
-    display:flex;
-    justify-content:space-around;
-    text-align:center;
-    padding:40px 20px;
-}
-
-.stats h2{
-    font-size:2.5rem;
-}
-
-@media(max-width:900px){
-
-.feature{
-    flex-direction:column;
-}
-
-.hero-content h1{
-    font-size:3rem;
-}
-
-.stats{
-    flex-direction:column;
-    gap:20px;
-}
-
-}
-</style>
-
+      @media(max-width: 900px) {
+        .stats-section {
+          flex-direction: column;
+          gap: var(--spacing-lg);
+        }
+      }
+    </style>
   </head>
 
-<body>
+  <body>
+    <section class="container">
 
-<header class="hero">
-    <div class="hero-content">
-        <h1>Tools</h1>
-        <p>General-purpose tools for building, repairing, inventing, and experimenting.</p>
-        <a href="#equipment" class="btn">Browse Equipment</a>
-    </div>
-</header>
+      <header class="hero-banner">
+        <section class="hero-title-box">
+          <h1>Tools</h1>
+        </section>
+      </header>
 
-<section class="quickstart">
-    <h2>Getting Started</h2>
-    <div class="cards">
-        <div>✅ All general tools are labeled GREEN</div>
-        <div>✅ Open to BTU Members</div>
-        <div>✅ Shared Community Resources</div>
-        <div>✅ Ask Questions. Break Less Stuff.</div>
-    </div>
-</section>
+      <main>
+        <article>
+          <section class="quickstart-section">
+            <p class="quickstart-subheading">General Tools equipment and materials are labeled <strong>GREEN</strong></p>
+            <p class="body-text">Power tools, mostly used in the Wood Shop, are more like... <strong>GREEEEN!</strong></p>
+          </section>
 
-<section class="feature">
-    <img src="tools.jpg" alt="BTU Tools">
+          <section class="feature-section">
+            <figure class="feature-image-box">
+              <img src="assets/tools.jpg" alt="BTU Tools">
+            </figure>
 
-    <div class="feature-text">
-        <h2>The Tools and the Talent</h2>
+            <section class="feature-text-box">
+              <h2>The Tools and the talent...</h2>
+              <p class="body-text">BTU Lab keeps lots of general tools on hand for all your inventing needs.</p>
+              <p class="body-text">We can accommodate dozens of people at once and are working on increasing project storage space. Yay!</p>
+            </section>
+          </section>
 
-        <p>
-            BTU Lab keeps a large collection of shared tools available
-            for projects, prototyping, repairs and experimentation.
-        </p>
+          <section class="materials-section">
+            <h2>Materials: BTU LAB IS NOT A FREE SUPPLY STORE.</h2>
+            <p class="small-text">But there are many ways to barter, including displaying your work in BTU, tagging us in social media, offering workshops, volunteering to organize supplies, and more. If you need something, we ask that you give something in return.</p>
+          </section>
 
-        <p>
-            Need something specific? Ask around. Chances are someone
-            knows how to use it.
-        </p>
+          <section id="equipment" class="equipment-section">
+            <h2>General Equipment</h2>
+            
+            <section class="equipment-grid">
+              <section class="equipment-column">
+                <ul>
+                  <li>Knives (see)</li>
+                  <li>Cutting Mats</li>
+                  <li>Scissors (not for fabric)</li>
+                  <li>Measuring Tools</li>
+                  <li>Various Glues*</li>
+                  <li>Various Screwdrivers</li>
+                  <li>Zip Ties*</li>
+                  <li>Plywood* (laser safe)</li>
+                </ul>
+              </section>
 
-        <a href="#" class="btn">View Workshops</a>
-    </div>
-</section>
+              <section class="equipment-column">
+                <ul>
+                  <li>Hot Glue Guns*</li>
+                  <li>Various Tapes*</li>
+                  <li>Dremel Tools*</li>
+                  <li>Drills / Drivers</li>
+                  <li>2D Craft Supplies</li>
+                  <li>3D Printing Supplies</li>
+                  <li>Plastics* (laser safe)</li>
+                </ul>
+              </section>
 
-<section class="materials">
-    <h2>Materials Are Not Free</h2>
+              <section class="equipment-column">
+                <ul>
+                  <li>Various Fasteners</li>
+                  <li>Various Sandpaper*</li>
+                  <li>Sanding Tools</li>
+                  <li>Saws</li>
+                  <li>Files</li>
+                  <li>Chisels</li>
+                  <li>Various Fabrics</li>
+                  <li>...AND MORE!</li>
+                </ul>
+              </section>
+            </section>
+          </section>
 
-    <p>
-        BTU Lab is not a free supply store. Contribute through workshops,
-        volunteering, organizing supplies, showing off projects,
-        helping clean, or teaching others.
-    </p>
-</section>
+          <section class="stats-section">
+            <section>
+              <h2>100+</h2>
+              <p>Shared Tools</p>
+            </section>
+            <section>
+              <h2>&infin;</h2>
+              <p>Weird Ideas</p>
+            </section>
+            <section>
+              <h2>BTU</h2>
+              <p>Community Powered</p>
+            </section>
+          </section>
+        </article>
+      </main>
 
-<section id="equipment" class="equipment">
+      <footer>
+        <p class="small-text">&copy;Copyright 2026 by nobody. All rights reversed. This is an imitation website for the CU Boulder ATLAS BTU.</p>
+      </footer>
 
-    <div class="card">
-        <h3>Hand Tools</h3>
-        <p>
-            Knives, Files, Screwdrivers,
-            Measuring Tools, Scissors
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Power Tools</h3>
-        <p>
-            Drills, Drivers,
-            Rotary Tools,
-            Glue Guns
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Materials</h3>
-        <p>
-            Tape, Cardboard,
-            Plastics,
-            Craft Supplies
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Hardware</h3>
-        <p>
-            Fasteners,
-            Sandpaper,
-            Wood Products,
-            Misc Parts
-        </p>
-    </div>
-
-</section>
-
-<section class="stats">
-
-    <div>
-        <h2>100+</h2>
-        <p>Shared Tools</p>
-    </div>
-
-    <div>
-        <h2>∞</h2>
-        <p>Weird Ideas</p>
-    </div>
-
-    <div>
-        <h2>BTU</h2>
-        <p>Community Powered</p>
-    </div>
-
-</section>
-
-</body>
-
-
-
-
-
-
-
-
-
-
-
+    </section>
+  </body>
+</html>
