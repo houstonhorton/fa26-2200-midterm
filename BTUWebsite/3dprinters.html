@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATLAS | BTU Lab - 3D Printers</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Commissioner:wght@100..900&family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="btu.css">
+
+    <style>
+      .hero-banner {
+        position: relative;
+        background: linear-gradient(rgba(142, 68, 173, 0.4), rgba(142, 68, 173, 0.4)), url('assets/3D-photo.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: var(--spacing-xl) 0;
+        margin-bottom: var(--spacing-xl);
+        border-radius: var(--radius-md);
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      }
+
+      .hero-title-box {
+        background-color: rgba(15, 57, 23, 0.75);
+        color: var(--color-text-light);
+        padding: var(--spacing-md) var(--spacing-lg);
+        display: inline-block;
+        border-radius: var(--radius-sm);
+      }
+
+      .hero-title-box h1 {
+        font-family: var(--font-primary);
+        font-size: 3.5rem;
+        margin: 0;
+        color: var(--color-text-light);
+        letter-spacing: 1px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .quickstart-section {
+        background-color: #ffffff;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+        text-align: center;
+      }
+
+      .quickstart-subheading {
+        font-family: var(--font-primary);
+        font-size: 1.5rem;
+        color: #8e44ad;
+        margin-bottom: 0;
+      }
+
+      .info-section {
+        background-color: #ffffff;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+      }
+
+      .feature-section {
+        background-color: #ffffff;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+        display: grid;
+        grid-template-columns: 350px 1fr;
+        gap: var(--spacing-xl);
+        align-items: center;
+      }
+
+      .feature-image-box img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        border-radius: var(--radius-sm);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      }
+
+      .feature-text-box h2 {
+        font-family: var(--font-primary);
+        font-size: 2.5rem;
+        color: #8e44ad;
+        margin-top: 0;
+        margin-bottom: var(--spacing-md);
+      }
+
+      .feature-text-box p {
+        margin-bottom: var(--spacing-md);
+        line-height: 1.6;
+      }
+
+      .equipment-section {
+        background-color: #ffffff;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+      }
+
+      .equipment-section h2 {
+        font-family: var(--font-primary);
+        font-size: 1.8rem;
+        color: #8e44ad;
+        margin-bottom: var(--spacing-md);
+      }
+
+      .equipment-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--spacing-lg);
+      }
+
+      .equipment-column ul {
+        margin: 0;
+        padding-left: var(--spacing-md);
+        line-height: 1.8;
+      }
+
+      .equipment-column li {
+        margin-bottom: 4px;
+        font-size: 0.95rem;
+      }
+
+      .policy-section {
+        background-color: #fcf4fc;
+        border-left: 6px solid #8e44ad;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-sm);
+        margin-bottom: var(--spacing-xl);
+      }
+
+      .policy-section h2 {
+        font-family: var(--font-primary);
+        font-size: 1.8rem;
+        color: #8e44ad;
+        margin-top: 0;
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .policy-section ul {
+        margin: 0;
+        padding-left: var(--spacing-md);
+        line-height: 1.8;
+      }
+
+      .materials-section {
+        background-color: #f0fff4;
+        border-left: 6px solid #2cab52;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-sm);
+        margin-bottom: var(--spacing-xl);
+      }
+
+      .materials-section h2 {
+        font-family: var(--font-primary);
+        font-size: 1.8rem;
+        color: #2cab52;
+        margin-top: 0;
+        margin-bottom: var(--spacing-xs);
+      }
+
+      footer {
+        margin-top: var(--spacing-xl);
+        padding-top: var(--spacing-md);
+        border-top: 1px solid color-mix(in srgb, var(--color-neutral) 20%, transparent);
+        text-align: center;
+        padding-bottom: var(--spacing-xl);
+      }
+
+      @media(max-width: 900px) {
+        .feature-section {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="container">
+
+      <header class="hero-banner">
+        <section class="hero-title-box">
+          <h1>3D Printers</h1>
+        </section>
+      </header>
+
+      <main>
+        <article>
+          <section class="quickstart-section">
+            <p class="quickstart-subheading">3D Printing equipment and materials are labeled <strong style="color: #8e44ad;">PURPLE</strong>.</p>
+          </section>
+
+          <section class="info-section">
+            <p class="body-text"><strong>FACULTY:</strong> Class assignments requiring 3D printing should be coordinated with LAs, TAs, or instructors. (Questions: <a href="mailto:zack.weaver@colorado.edu" class="link">zack.weaver@colorado.edu</a>)</p>
+            <p class="body-text"><strong>STUDENTS:</strong> Assistance with 3D Printing for class assignments should be coordinated with class LAs or TAs first, then "BTU Mischief Makers", if available.</p>
+            <p class="body-text"><strong>EVERYBODY:</strong> 3D printing hardware software update frequently! Make sure you stay up to date, too.</p>
+          </section>
+
+          <section class="feature-section">
+            <figure class="feature-image-box">
+              <img src="assets/3Dphoto1.jpg" alt="BTU 3D Printers">
+            </figure>
+
+            <section class="feature-text-box">
+              <h2>The Revolution will be printed...</h2>
+              <p class="body-text">3D Printers located in the main space are for <strong>intended use only!</strong> Additional 3D printers are available for experimentation. Contact a <a href="rules.html" class="link">Mischief Maker</a> to set it up. We got you!</p>
+              <p class="body-text">3D Printing is also the subject of some workshops. See workshops on the <a href="calendar.html" class="link">BTU Lab Calendar</a>.</p>
+              <p class="body-text">Jobs are run on a first-come first-served basis[cite: 7].***</p>
+              <p class="body-text">! PRUSA SLICER software is provided and required !</p>
+            </section>
+          </section>
+
+          <section id="equipment" class="equipment-section">
+            <h2>3D PRINTING EQUIPMENT AND MATERIALS</h2>
+            
+            <section class="equipment-grid">
+              <section class="equipment-column">
+                <ul>
+                  <li>Prusa MK4 FDM printer (x2)</li>
+                  <li>Prusa MINI+ FDM printer (x4)</li>
+                  <li>Prusa MK3S+ FDM printer (x2)</li>
+                  <li>Prusa MK2.5S FDM printer (x4)</li>
+                  <li>Additional FDM printers available for experimental projects. See us if you want something in before.</li>
+                </ul>
+              </section>
+
+              <section class="equipment-column">
+                <ul>
+                  <li>1.75mm PLA filament (black and random colors)</li>
+                  <li>1.75mm ABS filament (black and random colors)</li>
+                  <li>Additional materials allowed only with staff approval.</li>
+                </ul>
+              </section>
+            </section>
+          </section>
+
+          <section class="policy-section">
+            <h2>"Intended Use" of BTU Lab 3D Printers</h2>
+            <ul>
+              <li>Do not alter any part of the machine.</li>
+              <li>BTU uses PLA and ABS material, only. Unless other materials are agreed upon with BTU staff.</li>
+              <li>Do not restrain yourself on the use of the machine. There's more to it than YouTube... We're here to help you learn, hands-on.</li>
+              <li>Do not reboot third-party slicing software. Use Prusa Slicer, as specified for each machine.</li>
+              <li>*** We are updating our file management system to streamline your work. For now, please work directly with BTU staff to get your parts going.***</li>
+            </ul>
+          </section>
+
+          <section class="materials-section">
+            <h2>Materials: BTU LAB IS NOT A FREE SUPPLY STORE.</h2>
+            <p class="small-text">But there are many ways to barter, including displaying your work in BTU, tagging us in social media, offering workshops, volunteering to organize supplies, and more. If you need something, we ask that you give something in return.</p>
+          </section>
+        </article>
+      </main>
+    </section>
+  </body>
+</html>
