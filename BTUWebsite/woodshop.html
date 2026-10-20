@@ -1,125 +1,223 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wood Shop</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  body{
 
-    <title>ATLAS | BTU Lab</title>
-    <!-- comment here <link href="" rel="stylesheet" type="text/css"> -->
-    <link rel="stylesheet" href="style.css">
+    font-family:
+    "Inter",
+    "Segoe UI",
+    sans-serif;
 
-  </head>
+    line-height:1.6;
 
-  <body>
-    <div class="header">
-      <h1><a href="/assets/btulogo.jpg"><img src="assets/btulogo.jpg" alt="logo"></a>BLOW. THINGS. UP.</h1>
-    </div>
+    background:#f7f7f7;
+}
+  .alert-banner{
+    background:#e85b56;
+    color:white;
 
-    <div class="nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Tools</a></li>
-        <li><a href="#">Wood Shop</a></li>
-        <li><a href="#">Sewing & Textiles</a></li>
-        <li><a href="#">Electronics</a></li>
-        <li><a href="#">Lasers</a></li>
-        <li><a href="#">3D Printers</a></li>
-        <li><a href="#">CNC</a></li>
-        <li><a href="#">BTU Mischief Makers</a></li>
-        <li><a href="#">BTU Lab Calendar</a></li>
-        <li><a href="#">Lab Rules & Policies</a></li>
-        <li><a href="#">Workshops</a></li>
-        <li><a href="#">Help Us Blow Things Up</a></li>
-        <li><a href="#">Sewing & Textiles</a></li>
-      </ul>
+    text-align:center;
 
-      <form class="search">
-        <input type="search" name="q" placeholder="Search">
-        <input type="submit" value="Go!">
-      </form>
-    </div>
+    padding:18px;
 
-    <main>
-      <article>
+    font-size:1.1rem;
+    font-weight:bold;
+}
+.intro-card{
+
+    background:white;
+
+    max-width:1100px;
+
+    margin:-40px auto 40px;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+.register-btn{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    background:#2286c3;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:14px 28px;
+
+    border-radius:6px;
+
+    font-weight:600;
+}
+.equipment-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+    padding:40px;
+}
+
+.equip-card{
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+.safety-box{
+
+    background:#fff6f4;
+
+    border-left:6px solid #e85b56;
+
+    padding:35px;
+
+    margin:40px;
+
+    border-radius:8px;
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <div class="overlay">
+
         <h1>Wood Shop</h1>
-        <p>
-            The WOOD SHOP entrance is marked PINK. Inside, tools have their own color-coding system. You'll figure it out.
+
+        <p class="hero-subtitle">
+            Learn. Build. Create.
         </p>
 
-        <h2>Wood Shop Orientations</h2>
-        <p>
+        <a href="#" class="cta-button">
+            Register for Orientation
+        </a>
 
-            REGISTRATION IS REQUIRED!
+    </div>
 
-            LINK ON THE CALENDAR.
+</header>
 
-            The Wood Shop Orientation schedule can be found on the BTU Lab Calendar.
+<!-- INTRO -->
+ <section class="alert-banner">
 
-            Orientations are run by the BTU Mischief Maker(s) listed on the BTU Mischief Maker page.
-        </p>
-        <p>
-            WOOD SHOP EQUIPMENT
+    ⚠ Orientation Required Before Using Equipment
 
-            Table Saw**
-            Band Saw**
-            Drill Press**
-            Chop Saw**
+</section>
 
-            Belt Sander**
-            Random Orbit Sander
-            Palm Router
-            Drills / Drivers
+<section class="intro-card">
 
+    <h2>Getting Started</h2>
 
-            Hand Saws
-            Files
-            Measuring Tools
-            Other hand tools
+    <ul>
+        <li>✅ Entrance marked in PINK</li>
+        <li>✅ Orientation required</li>
+        <li>✅ Open to BTU members</li>
+        <li>✅ Tools use color-coded organization</li>
+    </ul>
+
+</section>
 
 
+<!-- INFO -->
 
-            Oh, and so, so much more my friends!
-        </p>
-        <p>
-            BTU Wood Shop Policies.
+<section class="info">
+    <p>
+        Access to certain machines is facilitated by BTU "Mischief Makers".
+    </p>
 
-        **FOR YOUR SAFETY, major equipment including table saw, band saw, belt sander, chop saw, and drill press are powered off between the hours of 10pm and 6am, daily. Tampering with timers is considered a serious safety violation.
+    <p>
+        WOOD SHOP access is separate from general BTU access and requires an orientation.
+    </p>
 
-        Violation of any wood shop policy will result in loss of access to BTU Lab and the wood shop until both orientations are repeated.
+    <p>
+        For your safety, major equipment including table saw, band saw, belt sander,
+        chop saw, and drill press are powered off between 10pm and 6am daily.
+    </p>
+</section>
 
-            Use of the wood shop requires an orientation from BTU Lab staff.
+<!-- MAIN CONTENT -->
 
-            Following the orientation, you may use the wood shop under the following conditions:
+<div class="orientation-box">
 
-                Observe all safety rules without exception.
+    <h2>Register for Orientation</h2>
 
-                Do not work alone when no one could hear you if you needed assistance. Stay in earshot.
+    <p>
+        Access to major equipment requires orientation.
+    </p>
 
-                Do not operate any tool that you are unfamiliar with. Get assistance.
+    <a href="#" class="register-btn">
+        View Calendar
+    </a>
 
-                Do not alter any machine in a permanent way.
+</div>
 
-                Do not remove any tools from the wood shop or BTU Lab without staff approval.
+<!-- EQUIPMENT -->
 
-                Do not attempt to repair a malfunctioning tool.
+<section class="equipment-grid">
 
-                Report malfunctioning tools. It is okay when a tool breaks under normal circumstances. A malfunctioning machine can be dangerous if a problem isn't understood. We just want to know what happened to prevent any possible harm.
+    <div class="equip-card">
+        <h3>Saws</h3>
+        <p>Table Saw, Band Saw, Chop Saw</p>
+    </div>
 
-                BTU Staff reserve the right to revoke wood shop access for any reason deemed necessary.
+    <div class="equip-card">
+        <h3>Sanders</h3>
+        <p>Belt Sander, Orbital Sander</p>
+    </div>
 
-                Deadlines, fatigue, and other lack of preparation do not justify ignoring any wood shop policy.
+    <div class="equip-card">
+        <h3>Power Tools</h3>
+        <p>Routers, Drills, Drivers</p>
+    </div>
 
-            Multiple violations of wood shop policy, by one or more individuals, will result in reduced access for everyone including locking out machines or the entire space when staff are not available.
-        </p>
-        <aside>
-            <p>
-            Access to certain machines is facilitated by BTU “Mischief Makers". Anyone can become a "Mischief Maker" on any machine.
+    <div class="equip-card">
+        <h3>Hand Tools</h3>
+        <p>Saws, Files, Measuring Tools</p>
+    </div>
 
-            *WOOD SHOP access is separate from general BTU access and REQUIRES AN ORIENTATION.*
+</section>
 
-            **FOR YOUR SAFETY, major equipment including table saw, band saw, belt sander, chop saw, and drill press are powered off between the hours of 10pm and 6am, daily.
-            </p>
-        </aside>
-      </article>
-    </main>
-  </body>
+
+<!-- POLICIES -->
+
+<section class="safety-box">
+
+    <h2>Safety Requirements</h2>
+
+    <ul>
+        <li>Orientation required.</li>
+        <li>No operating unfamiliar equipment.</li>
+        <li>Do not work alone if assistance may be required.</li>
+        <li>Do not modify machines.</li>
+        <li>Major equipment powers down from 10 PM to 6 AM.</li>
+    </ul>
+
+</section>
+
+</body>
 </html>
+
+

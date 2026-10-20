@@ -6,91 +6,300 @@
     <title>ATLAS | BTU Lab</title>
     <!-- comment here <link href="" rel="stylesheet" type="text/css"> -->
     <link rel="stylesheet" href="style.css">
+    <style>
+      *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:"Segoe UI",sans-serif;
+    background:#f7f7f7;
+    color:#333;
+    line-height:1.6;
+}
+
+.hero{
+    height:400px;
+    background:
+    linear-gradient(
+    rgba(55,190,90,.55),
+    rgba(55,190,90,.55)),
+    url("tools-banner.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content h1{
+    font-size:4rem;
+    color:#0f3917;
+}
+
+.hero-content p{
+    color:white;
+    font-size:1.2rem;
+    margin:15px 0;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    background:white;
+    color:#22a652;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.quickstart{
+    max-width:1100px;
+    margin:-50px auto 50px;
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.quickstart h2{
+    margin-bottom:20px;
+    color:#2cab52;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+}
+
+.cards div{
+    background:#f3fff6;
+    padding:15px;
+    border-radius:8px;
+}
+
+.feature{
+    max-width:1200px;
+    margin:auto;
+    padding:60px 20px;
+    display:flex;
+    gap:40px;
+    align-items:center;
+}
+
+.feature img{
+    width:400px;
+    max-width:100%;
+    border-radius:12px;
+}
+
+.feature-text h2{
+    color:#2286c3;
+    margin-bottom:20px;
+    font-size:2.5rem;
+}
+
+.materials{
+    max-width:1100px;
+    margin:0 auto 60px;
+    background:#f0fff4;
+    border-left:6px solid #2cab52;
+    padding:30px;
+    border-radius:8px;
+}
+
+.materials h2{
+    color:#2cab52;
+    margin-bottom:10px;
+}
+
+.equipment{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:14px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    color:#2cab52;
+    margin-bottom:15px;
+}
+
+.stats{
+    margin-top:60px;
+    background:#2cab52;
+    color:white;
+    display:flex;
+    justify-content:space-around;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.stats h2{
+    font-size:2.5rem;
+}
+
+@media(max-width:900px){
+
+.feature{
+    flex-direction:column;
+}
+
+.hero-content h1{
+    font-size:3rem;
+}
+
+.stats{
+    flex-direction:column;
+    gap:20px;
+}
+
+}
+</style>
 
   </head>
 
-  <body>
-    <div class="header">
-      <h1><a href="/assets/btulogo.jpg"><img src="assets/btulogo.jpg" alt="logo"></a>BLOW. THINGS. UP.</h1>
-    </div>
+<body>
 
-    <div class="nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Tools</a></li>
-        <li><a href="#">Wood Shop</a></li>
-        <li><a href="#">Sewing & Textiles</a></li>
-        <li><a href="#">Electronics</a></li>
-        <li><a href="#">Lasers</a></li>
-        <li><a href="#">3D Printers</a></li>
-        <li><a href="#">CNC</a></li>
-        <li><a href="#">BTU Mischief Makers</a></li>
-        <li><a href="#">BTU Lab Calendar</a></li>
-        <li><a href="#">Lab Rules & Policies</a></li>
-        <li><a href="#">Workshops</a></li>
-        <li><a href="#">Help Us Blow Things Up</a></li>
-        <li><a href="#">Sewing & Textiles</a></li>
-      </ul>
-
-      <form class="search">
-        <input type="search" name="q" placeholder="Search">
-        <input type="submit" value="Go!">
-      </form>
-    </div>
-
-    <main>
-      <article>
+<header class="hero">
+    <div class="hero-content">
         <h1>Tools</h1>
-        
+        <p>General-purpose tools for building, repairing, inventing, and experimenting.</p>
+        <a href="#equipment" class="btn">Browse Equipment</a>
+    </div>
+</header>
+
+<section class="quickstart">
+    <h2>Getting Started</h2>
+    <div class="cards">
+        <div>✅ All general tools are labeled GREEN</div>
+        <div>✅ Open to BTU Members</div>
+        <div>✅ Shared Community Resources</div>
+        <div>✅ Ask Questions. Break Less Stuff.</div>
+    </div>
+</section>
+
+<section class="feature">
+    <img src="tools.jpg" alt="BTU Tools">
+
+    <div class="feature-text">
+        <h2>The Tools and the Talent</h2>
+
         <p>
-            General Tools equipment and materials are labeled GREEN.  
-            <br>
-            Power tools, mostly used in the Wood Shop, are more like... GREEEEN!
-        </p>
-       
-
-        <h2>The Tools and the talent...</h2>
-
-        <p>
-            BTU Lab keeps lots of general tools on hand for all your inventing needs. 
-            
-            We can accommodate dozens of people at once and are working on increasing project storage space. Yay!
-        </p>
-        <p>
-            General Equipment
-            Knives (yes!)
-            Cutting Mats
-            Scissors (not for fabric)
-            Measuring Tools
-            Various Glues*
-            Various Screwdrivers
-            Zip Ties*
-            Plywoods* (laser safe)
-
-            Hot Glue Guns*
-            Various Tapes*
-            Dremel Tools
-            Drills / Drivers
-            Various Papers
-            2D Craft Supplies
-            3D Craft Supplies
-            Plastics* (laser safe)
-
-            Various Fasteners
-            Sandpaper*
-            Sanding Tools
-            Saws
-            Files
-            Chisels
-            Various Fabrics
-            ... and MORE!
+            BTU Lab keeps a large collection of shared tools available
+            for projects, prototyping, repairs and experimentation.
         </p>
 
+        <p>
+            Need something specific? Ask around. Chances are someone
+            knows how to use it.
+        </p>
 
-        <aside>
-        
-        </aside>
-      </article>
-    </main>
-  </body>
-</html>
+        <a href="#" class="btn">View Workshops</a>
+    </div>
+</section>
+
+<section class="materials">
+    <h2>Materials Are Not Free</h2>
+
+    <p>
+        BTU Lab is not a free supply store. Contribute through workshops,
+        volunteering, organizing supplies, showing off projects,
+        helping clean, or teaching others.
+    </p>
+</section>
+
+<section id="equipment" class="equipment">
+
+    <div class="card">
+        <h3>Hand Tools</h3>
+        <p>
+            Knives, Files, Screwdrivers,
+            Measuring Tools, Scissors
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Power Tools</h3>
+        <p>
+            Drills, Drivers,
+            Rotary Tools,
+            Glue Guns
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Materials</h3>
+        <p>
+            Tape, Cardboard,
+            Plastics,
+            Craft Supplies
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Hardware</h3>
+        <p>
+            Fasteners,
+            Sandpaper,
+            Wood Products,
+            Misc Parts
+        </p>
+    </div>
+
+</section>
+
+<section class="stats">
+
+    <div>
+        <h2>100+</h2>
+        <p>Shared Tools</p>
+    </div>
+
+    <div>
+        <h2>∞</h2>
+        <p>Weird Ideas</p>
+    </div>
+
+    <div>
+        <h2>BTU</h2>
+        <p>Community Powered</p>
+    </div>
+
+</section>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
