@@ -1,57 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATLAS | BTU Lab - CNC</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Commissioner:wght@100..900&family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
 
-    <title>ATLAS | BTU Lab</title>
-    <!-- comment here <link href="" rel="stylesheet" type="text/css"> -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="btu.css">
 
+    <style>
+      .hero-banner {
+        position: relative;
+        background: linear-gradient(rgba(34, 134, 195, 0.4), rgba(34, 134, 195, 0.4)), url('assets/cnc-photo.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: var(--spacing-xl) 0;
+        margin-bottom: var(--spacing-xl);
+        border-radius: var(--radius-md);
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      }
+
+      .hero-title-box {
+        background-color: rgba(15, 57, 23, 0.75);
+        color: var(--color-text-light);
+        padding: var(--spacing-md) var(--spacing-lg);
+        display: inline-block;
+        border-radius: var(--radius-sm);
+      }
+
+      .hero-title-box h1 {
+        font-family: var(--font-primary);
+        font-size: 3.5rem;
+        margin: 0;
+        color: var(--color-text-light);
+        letter-spacing: 1px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .quickstart-section {
+        background-color: #ffffff;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+        text-align: center;
+      }
+
+      .quickstart-subheading {
+        font-family: var(--font-primary);
+        font-size: 1.8rem;
+        color: #2286c3;
+        margin-bottom: 0;
+      }
+
+      .info-section {
+        background-color: #ffffff;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-sm);
+      }
+
+      .feature-section {
+        background-color: #ffffff;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+        display: grid;
+        grid-template-columns: 350px 1fr;
+        gap: var(--spacing-xl);
+        align-items: center;
+      }
+
+      .feature-image-box img {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        border-radius: var(--radius-sm);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      }
+
+      .feature-text-box h2 {
+        font-family: var(--font-primary);
+        font-size: 2.5rem;
+        color: var(--color-secondary);
+        margin-top: 0;
+        margin-bottom: var(--spacing-md);
+      }
+
+      .feature-text-box p {
+        margin-bottom: var(--spacing-md);
+        line-height: 1.6;
+      }
+
+      footer {
+        margin-top: var(--spacing-xl);
+        padding-top: var(--spacing-md);
+        border-top: 1px solid color-mix(in srgb, var(--color-neutral) 20%, transparent);
+        text-align: center;
+        padding-bottom: var(--spacing-xl);
+      }
+
+      @media(max-width: 900px) {
+        .feature-section {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <div class="header">
-      <h1><a href="/assets/btulogo.jpg"><img src="assets/btulogo.jpg" alt="logo"></a>BLOW. THINGS. UP.</h1>
-    </div>
+    <section class="container">
 
-    <div class="nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Tools</a></li>
-        <li><a href="#">Wood Shop</a></li>
-        <li><a href="#">Sewing & Textiles</a></li>
-        <li><a href="#">Electronics</a></li>
-        <li><a href="#">Lasers</a></li>
-        <li><a href="#">3D Printers</a></li>
-        <li><a href="#">CNC</a></li>
-        <li><a href="#">BTU Mischief Makers</a></li>
-        <li><a href="#">BTU Lab Calendar</a></li>
-        <li><a href="#">Lab Rules & Policies</a></li>
-        <li><a href="#">Workshops</a></li>
-        <li><a href="#">Help Us Blow Things Up</a></li>
-        <li><a href="#">Sewing & Textiles</a></li>
-      </ul>
+      <header class="hero-banner">
+        <section class="hero-title-box">
+          <h1>WE GOT ONE!</h1>
+        </section>
+      </header>
 
-      <form class="search">
-        <input type="search" name="q" placeholder="Search">
-        <input type="submit" value="Go!">
-      </form>
-    </div>
+      <main>
+        <article>
+          <section class="quickstart-section">
+            <p class="quickstart-subheading">CNC equipment and materials are labeled <strong style="color: #2286c3;">BLUE</strong>.</p>
+          </section>
 
-    <main>
-      <article>
-        <h1>CNC</h1>
-        
-       
+          <section class="info-section">
+            <p class="body-text"><strong>FACULTY:</strong> Class assignments requiring Shaper CNC should be coordinated by LAs, TAs, or instructors. (Questions: <a href="mailto:zack.weaver@colorado.edu" class="link">zack.weaver@colorado.edu</a>)</p>
+            <p class="body-text"><strong>STUDENTS:</strong> Assistance with Shaper CNC for class assignments should be coordinated with class LAs or TAs first, then "BTU Mischief Makers", if available.</p>
+            <p class="body-text"><strong>EVERYBODY:</strong> A brief training is required before using the Shaper CNC.</p>
+          </section>
 
-        <h2>Placeholder</h2>
-        
+          <section class="feature-section">
+            <figure class="feature-image-box">
+              <img src="assets/cncphoto1.jpg" alt="Shaper Origin CNC Router">
+            </figure>
 
-
-        <aside>
-        
-        </aside>
-      </article>
-    </main>
+            <section class="feature-text-box">
+              <h2>'Cause I'm <span style="color: #2286c3;">C N C</span>...Dynamite!</h2>
+              <p class="body-text"><em>Thanks to generous support</em> BTU purchased a Shaper Origin CNC router in 2026!</p>
+              <p class="body-text">Basic operation of the Shaper can be found here: <br><a href="https://www.youtube.com/watch?v=QxjE5WOAGi4" target="_blank" class="link">www.youtube.com/watch?v=QxjE5WOAGi4</a></p>
+              <p class="body-text">The Shaper is a precision <em>(expensive)</em> tool! Please contact Zack at <a href="mailto:zack.weaver@colorado.edu" class="link">zack.weaver@colorado.edu</a> to get started.</p>
+            </section>
+          </section>
+        </article>
+      </main>
+    </section>
   </body>
 </html>

@@ -1,82 +1,230 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATLAS | BTU Lab - Electronics</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Commissioner:wght@100..900&family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
 
-    <title>ATLAS | BTU Lab</title>
-    <!-- comment here <link href="" rel="stylesheet" type="text/css"> -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="btu.css">
 
+    <style>
+      .hero-banner {
+        position: relative;
+        background: linear-gradient(rgba(34, 134, 195, 0.4), rgba(34, 134, 195, 0.4)), url('assets/electronics-photo.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: var(--spacing-xl) 0;
+        margin-bottom: var(--spacing-xl);
+        border-radius: var(--radius-md);
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      }
+
+      .hero-title-box {
+        background-color: rgba(15, 57, 23, 0.75);
+        color: var(--color-text-light);
+        padding: var(--spacing-md) var(--spacing-lg);
+        display: inline-block;
+        border-radius: var(--radius-sm);
+      }
+
+      .hero-title-box h1 {
+        font-family: var(--font-primary);
+        font-size: 3.5rem;
+        margin: 0;
+        color: var(--color-text-light);
+        letter-spacing: 1px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .quickstart-section {
+        background-color: #ffffff;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+        text-align: center;
+      }
+
+      .quickstart-subheading {
+        font-family: var(--font-primary);
+        font-size: 1.5rem;
+        color: #2286c3;
+        margin-bottom: 0;
+      }
+
+      .feature-section {
+        background-color: #ffffff;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+        display: grid;
+        grid-template-columns: 350px 1fr;
+        gap: var(--spacing-xl);
+        align-items: center;
+      }
+
+      .feature-image-box img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        border-radius: var(--radius-sm);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      }
+
+      .feature-text-box h2 {
+        font-family: var(--font-primary);
+        font-size: 2.5rem;
+        color: var(--color-secondary);
+        margin-top: 0;
+        margin-bottom: var(--spacing-md);
+      }
+
+      .feature-text-box p {
+        margin-bottom: var(--spacing-md);
+        line-height: 1.6;
+      }
+
+      .materials-section {
+        background-color: #f0fff4;
+        border-left: 6px solid #2cab52;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-sm);
+        margin-bottom: var(--spacing-xl);
+      }
+
+      .materials-section h2 {
+        font-family: var(--font-primary);
+        font-size: 1.8rem;
+        color: #2cab52;
+        margin-top: 0;
+        margin-bottom: var(--spacing-xs);
+      }
+
+      .equipment-section {
+        background-color: #ffffff;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+      }
+
+      .equipment-section h2 {
+        font-family: var(--font-primary);
+        font-size: 2rem;
+        color: var(--color-secondary);
+        margin-bottom: var(--spacing-md);
+      }
+
+      .equipment-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--spacing-lg);
+      }
+
+      .equipment-column ul {
+        margin: 0;
+        padding-left: var(--spacing-md);
+        line-height: 1.8;
+      }
+
+      .equipment-column li {
+        margin-bottom: 4px;
+        font-size: 0.95rem;
+      }
+
+      footer {
+        margin-top: var(--spacing-xl);
+        padding-top: var(--spacing-md);
+        border-top: 1px solid color-mix(in srgb, var(--color-neutral) 20%, transparent);
+        text-align: center;
+        padding-bottom: var(--spacing-xl);
+      }
+
+      @media(max-width: 900px) {
+        .feature-section {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
 
   <body>
-    <div class="header">
-      <h1><a href="/assets/btulogo.jpg"><img src="assets/btulogo.jpg" alt="logo"></a>BLOW. THINGS. UP.</h1>
-    </div>
+    <section class="container">
 
-    <div class="nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Tools</a></li>
-        <li><a href="#">Wood Shop</a></li>
-        <li><a href="#">Sewing & Textiles</a></li>
-        <li><a href="#">Electronics</a></li>
-        <li><a href="#">Lasers</a></li>
-        <li><a href="#">3D Printers</a></li>
-        <li><a href="#">CNC</a></li>
-        <li><a href="#">BTU Mischief Makers</a></li>
-        <li><a href="#">BTU Lab Calendar</a></li>
-        <li><a href="#">Lab Rules & Policies</a></li>
-        <li><a href="#">Workshops</a></li>
-        <li><a href="#">Help Us Blow Things Up</a></li>
-        <li><a href="#">Sewing & Textiles</a></li>
-      </ul>
+      <header class="hero-banner">
+        <section class="hero-title-box">
+          <h1>Electronics</h1>
+        </section>
+      </header>
 
-      <form class="search">
-        <input type="search" name="q" placeholder="Search">
-        <input type="submit" value="Go!">
-      </form>
-    </div>
+      <main>
+        <article>
+          <section class="quickstart-section">
+            <p class="quickstart-subheading">Electronics equipment is labeled, Teal? Cyan? Turquoise? Aqua? Oh, isn't... <strong style="color: #2286c3;">THIS COLOR!</strong></p>
+          </section>
 
-    <main>
-      <article>
-        <h1>Electronics</h1>
-        <p>
-            Electronics equipment is labeled... teal? Cyan? Turquoise? Aqua? Oh, lort...THIS COLOR!
-        </p>
-       
+          <section class="feature-section">
+            <figure class="feature-image-box">
+              <img src="assets/electronicsphoto1.jpg" alt="BTU Electronics Benches">
+            </figure>
 
-        <h2>With great power...</h2>
-        <p>
-            Electronics and coding training happens as requested by staff and/or community members. It is also the subject of some ATLAS classes and BTU workshops. See workshops on the BTU Lab Calendar.
+            <section class="feature-text-box">
+              <h2>With great power...</h2>
+              <p class="body-text">Electronics and coding training happens <a href="calendar.html" class="link">as requested</a> by staff and/or community members. It is also the subject of some ATLAS classes and BTU workshops. See workshops on the <a href="calendar.html" class="link">BTU Lab Calendar</a>.</p>
+              <p class="body-text">See the <a href="rules.html" class="link">BTU Mischief Maker page</a> to contact one of our community experts to get you started.</p>
+            </section>
+          </section>
 
-            See the BTU Mischief Maker page to contact one of our community experts to get you started.
-        </p>
-        <p>
-            ELECTRONICS EQUIPMENT & SUPPLIES
+          <section class="materials-section">
+            <h2>Materials: BTU LAB IS NOT A FREE SUPPLY STORE.</h2>
+            <p class="small-text">But there are many ways to barter, including displaying your work in BTU, tagging us in social media, offering workshops, volunteering to organize supplies, and more. If you need something, we ask that you give something in return.</p>
+          </section>
 
-            Solder Irons & Accessories
-            Bench Top Power Supplies
-            Soldering Rework Station
-            Digital Oscilloscope
+          <section id="equipment" class="equipment-section">
+            <h2>Electronics Equipment & Supplies</h2>
+            
+            <section class="equipment-grid">
+              <section class="equipment-column">
+                <ul>
+                  <li>Solder Irons & Accessories</li>
+                  <li>Bench Top Power Supplies</li>
+                  <li>Soldering Rework Station</li>
+                  <li>Digital Oscilloscope</li>
+                </ul>
+              </section>
 
+              <section class="equipment-column">
+                <ul>
+                  <li>Arduino / Raspberry Pi accessories</li>
+                  <li>Various Power Components (V+ R* T*)</li>
+                  <li>Various Input Components</li>
+                </ul>
+              </section>
 
-            Arduino / Raspberry Pi ecosystem
-            Various Power Components (V=I*R stuff!)
-            Various Input Components
-            Various Output Components
-
-
-            LilyPad 
-            Prototyping Supplies
-            UhhhhANDMORE!
-        </p>
-
-
-        <aside>
-        
-        </aside>
-      </article>
-    </main>
+              <section class="equipment-column">
+                <ul>
+                  <li>UI Panel</li>
+                  <li>Prototyping Supplies</li>
+                  <li>UNNAMEMORE!</li>
+                </ul>
+              </section>
+            </section>
+          </section>
+        </article>
+      </main>
+    </section>
   </body>
 </html>
