@@ -88,6 +88,23 @@
         gap: var(--spacing-lg);
       }
 
+      .materials-section {
+        background-color: #f0fff4;
+        border-left: 6px solid #2cab52;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-sm);
+        margin-top: var(--spacing-xl);
+        margin-bottom: var(--spacing-xl);
+      }
+
+      .materials-section h2 {
+        font-family: var(--font-primary);
+        font-size: 1.8rem;
+        color: #2cab52;
+        margin-top: 0;
+        margin-bottom: var(--spacing-xs);
+      }
+
       .card {
         background-color: #ffffff;
         border-radius: var(--radius-md);
@@ -123,6 +140,10 @@
       .card p {
         font-size: 0.9rem;
         line-height: 1.5;
+      }
+
+      .insta {
+        width:60px;
       }
 
       footer {
@@ -210,51 +231,147 @@
   
   <header class="hero-banner">
     <section class="hero-title-box">
-      <h1>Home</h1>
+      <h1>BLOW. THINGS. UP.</h1>
     </section>
   </header>
 
-      
-
     <main>
       <article>
-        <h1>Home</h1>
-        <p>The ATLAS BTU Lab is an inclusive community 
-            makerspace facilitating projects at the 
-            intersection of Art, Design, Engineering and Architecture. 
-            It serves multiple functions as a general workspace, and workshop host. 
-        </p>
-       <p>
-        WHO? Anyone* can gain access to BTU. Our goal is to provide the most diverse, inclusive environment for makers of all types in a highly experimental and productive space.
-        <br>
-        *Due to increased campus security, we are currently unable to sponsor BuffOne Guest cards.
-       </p>
-       <p>
-        HOW? New members attend a 20 minute general orientation covering community expectations, safety and equipment.
-       </p>
-       <p>
-        WHEN? The orientation* schedule, and all scheduled events can be found on the BTU Calendar. [*Some things involve separate orientations...like lasers and stuff. Check the calendar and the pages above for your interests.]
-       </p>
-       <p>
-        Uh..WHAT? Questions: email BTU Lab at atlasbtulab@gmail.com. 
-       </p>
-       <p>
-        And, finally...WHERE?
-        <br>
-        320 UCB
-        <br>
-        1125 18th St
-        <br>
-        Boulder, CO 80309
-       </p>
 
-        <h2>Placeholder</h2>
+       <h1 class="section-heading" style="font-size: var(--spacing-xxl)">HOME</h1>
+
+       <p style="padding: 50px; text-align: center;"><strong>The ATLAS BTU Lab is an inclusive community 
+        makerspace facilitating projects at the 
+        intersection of Art, Design, Engineering and Architecture.</strong></p>
+        <p style="margin-bottom: 48px; padding-bottom: 24px; text-align: center;"><strong>It serves multiple functions as a general workspace, and workshop host. 
+        </strong></p>
+
+        <section class="welcome-section">
+          <section class="welcome-grid">
+            <figure>
+              <img src="assets/HomePhoto1.jpg" alt="Dr. Z and gang with snake">
+            </figure>
+            <section>
+              <h1 style="color: var(--color-accent);">WHO?</h1>
+              <p class="body-text"><strong>Anyone* can gain access to BTU. Our goal is to provide the most diverse, inclusive environment for makers of all types in a highly experimental and productive space. </strong></p>
+              <p class="body-text" style="font-size: var(--spacing-xs); margin-top: 36px; padding-top: 36px;">*Due to increased campus security, we are currently unable to sponsor BuffOne Guest cards.
+            </section>
+          </section>
+        </section>
+
+        <section class="welcome-section">
+          <section class="welcome-grid">
+            <figure>
+              <img src="assets/HomePhoto2.jpg" alt="girl with tool in hand">
+            </figure>
+            <section>
+              <h1 style="color: var(--color-secondary);">HOW?</h1>
+              <p class="body-text"><strong>New members attend a 20 minute general orientation covering community expectations, safety and equipment. </strong></p>
+            </section>
+          </section>
+        </section>
+
+        <section class="welcome-section">
+          <section class="welcome-grid">
+            <figure>
+              <img src="assets/HomePhoto3.jpg" alt="BTU hard at work">
+            </figure>
+            <section>
+              <h1 style="color: var(--color-highlight);">WHEN?</h1>
+              <p class="body-text"><strong>The orientation* schedule, and all scheduled events can be found on the <a href="/BTUWebsite/calendar.html" class="link">BTU Calendar</a>. </strong></p>
+              <p class="body-text" style="font-size: var(--spacing-xs); margin-top: 36px; padding-top: 36px;">[*Some things involve separate orientations...like lasers and stuff. Check the calendar and the pages above for your interests.]</p>
+            </section>
+          </section>
+        </section>
+
+        <section class="welcome-section">
+          <section class="welcome-grid">
+            <figure>
+              <img src="assets/HomePhoto4.jpg" alt="cool project with light">
+            </figure>
+            <section>
+              <h1 style="color: var(--color-neutral);">Uh..WHAT?</h1>
+              <p class="body-text"><strong>Questions: email BTU Lab at <a href="mailto:atlasbtulab@gmail.com" class="link">atlasbtulab@gmail.com</a>. </strong></p>
+            </section>
+          </section>
+        </section>
+
+        <section class="welcome-section">
+          <section class="welcome-grid">
+            <div class="map">
+              <iframe
+                title="Map showing the ATLAS Institute, University of Colorado Boulder, 1125 18th St, Boulder, CO"
+                src="https://maps-api-ssl.google.com/maps?hl=en-US&amp;ll=40.007575,-105.269933&amp;output=embed&amp;q=University+of+Colorado+Boulder,+320+UCB,+1125+18th+St,+Boulder,+CO+80309,+United+States+(ATLAS+Institute,+University+of+Colorado+Boulder)&amp;z=18"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <section>
+              <h1 style="color: var(--color-primary);">And, finally...WHERE?</h1>
+              <p class="body-text">Roser ATLAS Center</p>
+              <p class="body-text">University of Colorado Boulder</p>
+              <p class="body-text">1125 18th St. 320 UCB</p>
+              <p class="body-text">Boulder, CO 80309-0320</p>
+            </section>
+          </section>
+        </section>
+
+        <h2 class="section-heading">BTU RESOURCES</h2>
         
+        <section class="team-grid">
+          <article class="card">
+            <a href="/BTUWebsite/lasers.html"><img src="assets/FacultyPhoto2.jpg" alt="Laser Cutting"></a>
+            <h3>LASER CUTTING</h3>
+            <p class="small-text">Laser cutter access requires a one-time orientation. The schedule for this, and all BTU events can be found on the <a href="calendar.html" class="link">CALENDAR</a> page of the BTU website.</p>
+            <p class="small-text" style="margin-top: 8px;">Additional support for students is explained on the <a href="#" class="link">LASERS</a> page of the BTU website.</p>
+            <p class="small-text" style="margin-top: 8px;">Instructional requirements for faculty needing laser cutters can be found <a href="#" class="link">HERE</a>.</p>
+          </article>
 
+          <article class="card">
+            <a href="/BTUWebsite/3dprinters.html"><img src="assets/FacultyPhoto3.jpg" alt="3D Printing"></a>
+            <h3>3D PRINTING</h3>
+            <p class="small-text">3D-Printing access requires a one-time, 10-15 minute orientation for all users. This orientation can be scheduled for individuals or classes, upon request.</p>
+            <p class="small-text" style="margin-top: 8px;">To learn about available resources or to request an orientation, please visit the <a href="#" class="link">3D PRINTING</a> page of the BTU website.</p>
+            <p class="small-text" style="margin-top: 8px;">Instructional requirements for faculty needing 3D printers can be found <a href="#" class="link">HERE</a>.</p>
+          </article>
 
-        <aside>
+          <article class="card">
+            <a href="/BTUWebsite/woodshop.html"><img src="assets/FacultyPhoto4.png" alt="Wood Shop"></a>
+            <h3>WOOD SHOP</h3>
+            <p class="small-text">Wood shop access requires a one-time orientation regardless of past experience. The schedule for this and all BTU events can be found on the <a href="calendar.html" class="link">CALENDAR</a> page of the BTU website.</p>
+            <p class="small-text" style="margin-top: 8px;">Additional information about wood shop tools and policies can be found on the <a href="#" class="link">WOOD SHOP</a> page of the BTU website.</p>
+            <p class="small-text" style="margin-top: 8px;">Instructional requirements for faculty needing the wood shop can be found <a href="#" class="link">HERE</a>.</p>
+          </article>
+
+          <article class="card">
+            <img src="assets/FacultyPhoto5.jpg" alt="Other Resources">
+            <h3>OTHER RESOURCES</h3>
+            <p class="small-text">BTU has many additional resources, which are explained on the <a href="#" class="link">BTU WEBSITE</a>, as well as requirements for any training you might need.</p>
+            <p class="small-text" style="margin-top: 8px;">Support is also provided by BTU's amazing student staff, the <a href="mischief.html" class="link">BTU MISCHIEF MAKERS</a>.</p>
+            <p class="small-text" style="margin-top: 8px;">Each of these offer instructional support in many topics, listed on the Mischief Makers page, along with their contact information.</p>
+          </article>
+        </section>
+
+        <section class="materials-section">
+          <h2>Materials: BTU LAB IS NOT A FREE SUPPLY STORE.</h2>
+          <p class="small-text">But there are many ways to barter, including displaying your work in BTU, tagging us in social media, offering workshops, volunteering to organize supplies, and more. If you need something, we ask that you give something in return.</p>
+        </section>
+
+        <section class="welcome-section" style="margin-top: var(--spacing-xl); text-align: center;">
+          <h3 style="font-family: var(--font-primary); font-size: 1.8rem; color: var(--color-secondary); margin-bottom: var(--spacing-xs);">NEED MORE HELP FROM STAFF?</h3>
+          <p class="small-text">Below is the regular schedule and contact information for the current semester.</p>
+          <p class="body-text" style="margin-top: var(--spacing-sm); font-weight: bold;">Pending...</p>
+        </section>
+
+        <section style="text-align: center; margin-top: var(--spacing-xl);">
+          <h3 style="font-family: var(--font-primary); font-size: 1.8rem; color: var(--color-primary); margin-bottom: var(--spacing-xs);">WE LOVE SEEING WHAT YOU MAKE POSSIBLE in the BTU Lab.</h3>
+          <p class="body-text">You and your students can help us out by following and tagging your <em style="color: #f83a22; font-weight: bold;">RAD</em> projects on Instagram, @btulab_cu.</p>
+          <p style="margin-top: var(--spacing-md);">
+            <a href="https://www.instagram.com/btulab_cu/" target="_blank" style="display: inline-block; color: inherit; text-decoration: none;">
+            <img class="insta" src="/BTUWebsite/assets/instalogo.png" alt="insta logo"></a>
+          </p>
+        </section>
+
         
-        </aside>
       </article>
     </main>
     <script>
