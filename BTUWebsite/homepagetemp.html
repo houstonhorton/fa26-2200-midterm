@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATLAS | BTU Lab - pagename</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Commissioner:wght@100..900&family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="btu.css">
+
+    <style>
+      .hero-banner {
+        position: relative;
+        background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('assets/workshops-photo.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: var(--spacing-xl) 0;
+        margin-top: var(--spacing-sm);
+        margin-bottom: var(--spacing-xl);
+        border-radius: var(--radius-md);
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      }
+
+      .hero-title-box {
+        background-color: rgba(0, 121, 145, 0.75);
+        color: var(--color-text-light);
+        padding: var(--spacing-md) var(--spacing-lg);
+        display: inline-block;
+        border-radius: var(--radius-sm);
+      }
+
+      .hero-title-box h1 {
+        font-family: var(--font-primary);
+        font-size: 3.5rem;
+        margin: 0;
+        color: var(--color-text-light);
+        letter-spacing: 1px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .pagename-content-section {
+        background-color: #ffffff;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .pagename-image-box img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: var(--radius-sm);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      }
+
+      .pagename-text-box h2 {
+        font-family: var(--font-primary);
+        font-size: 2.5rem;
+        color: var(--color-secondary);
+        margin-top: 0;
+        margin-bottom: var(--spacing-md);
+      }
+
+      .pagename-text-box ol {
+        margin: var(--spacing-sm) 0 var(--spacing-md) var(--spacing-md);
+        padding: 0;
+        line-height: 1.6;
+      }
+
+      .pagename-text-box li {
+        margin-bottom: var(--spacing-xs);
+      }
+
+      footer {
+        margin-top: var(--spacing-xl);
+        padding-top: var(--spacing-md);
+        border-top: 1px solid color-mix(in srgb, var(--color-neutral) 20%, transparent);
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    
+    <header class="site-header">
+      <div class="container header-inner">
+  
+        <a class="brand" href="index.html">
+          <img class="brand-logo"
+                src="assets/btulogo.jpg"
+                alt="logo">
+          <span class="brand-name">ATLAS | BTU Lab</span>
+        </a>
+  
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-overlay">
+          <span class="menu-icon" aria-hidden="true"></span>
+          <span>Menu</span>
+        </button>
+  
+      </div>
+    </header>
+
+        <!-- ======= MENU ======= -->
+  <div id="menu-overlay" class="menu-overlay" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
+    <div class="container menu-inner">
+
+      <div class="menu-top">
+        <span class="menu-title">ATLAS | BTU Lab</span>
+        <button class="menu-close" type="button">
+          <span>Close</span>
+          <span class="menu-icon menu-icon--close" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <nav aria-label="Main" class="menu-groups">
+
+        <section class="menu-group" aria-labelledby="menu-visit">
+          <h2 id="menu-visit">Visit</h2>
+          <ul>
+            <li><a href="/BTUWebsite/index.html" aria-current="page">Home</a></li>
+            <li><a href="/BTUWebsite/calendar.html">BTU Lab Calendar</a></li>
+            <li><a href="/BTUWebsite/rules.html">Lab Rules &amp; Policies</a></li>
+          </ul>
+        </section>
+
+        <section class="menu-group" aria-labelledby="menu-equipment">
+          <h2 id="menu-equipment">Equipment</h2>
+          <ul>
+            <li><a href="/BTUWebsite/tools.html">Tools</a></li>
+            <li><a href="/BTUWebsite/woodshop.html">Wood Shop</a></li>
+            <li><a href="/BTUWebsite/sewingtext.html">Sewing &amp; Textiles</a></li>
+            <li><a href="/BTUWebsite/electronics.html">Electronics</a></li>
+            <li><a href="/BTUWebsite/lasers.html">Lasers!</a></li>
+            <li><a href="/BTUWebsite/3dprinters.html">3D Printers</a></li>
+            <li><a href="/BTUWebsite/cnc.html">CNC</a></li>
+          </ul>
+        </section>
+
+        <section class="menu-group" aria-labelledby="menu-community">
+          <h2 id="menu-community">Community</h2>
+          <ul>
+            <li><a href="/BTUWebsite/mischief.html">BTU Mischief Makers</a></li>
+            <li><a href="/BTUWebsite/workshops.html">Workshops</a></li>
+            <li><a href="/BTUWebsite/help.html">Help Us Blow Things Up</a></li>
+            <li><a href="/BTUWebsite/faculty.html">Faculty</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+  </div>
+  
+  <header class="hero-banner">
+    <section class="hero-title-box">
+      <h1>Workshops</h1>
+    </section>
+  </header>
+
+      <main>
+        <article>
+          <section class="pagename-content-section">
+            <figure class="pagename-image-box">
+              <img src="assets/WorkshopsPhoto1.jpg" alt="Students in BTU Lab workshop">
+            </figure>
+
+            <section class="pagename-text-box">
+              <h2>Show us. And tell us.</h2>
+              <p class="body-text"><strong>BTU Lab hosts all kinds of workshops!</strong> Whether you're a student, instructor, local artist, or too cool for labels, come share your skills in two easy steps:</p>
+              
+              <ol>
+                <li>Fill out this basic <a href="#" class="link">Proposal Form</a>.</li>
+                <li>Email us at <a href="mailto:atlasbtulab@gmail.com" class="link">atlasbtulab@gmail.com</a> to let us know you did.</li>
+              </ol>
+
+              <p class="body-text"><strong>That's it!</strong> We will get back to you with confirmation as soon as possible.</p>
+            </section>
+          </section>
+        </article>
+      </main>
+      <script>
+        // Menu overlay open and close
+        (function () {
+          const openBtn = document.querySelector('.menu-button');
+          const closeBtn = document.querySelector('.menu-close');
+          const overlay = document.getElementById('menu-overlay');
+          const focusable = 'a[href], button:not([disabled])';
+    
+          function openMenu() {
+            overlay.hidden = false;
+            document.body.classList.add('menu-open');
+            openBtn.setAttribute('aria-expanded', 'true');
+            closeBtn.focus();
+          }
+    
+          function closeMenu() {
+            overlay.hidden = true;
+            document.body.classList.remove('menu-open');
+            openBtn.setAttribute('aria-expanded', 'false');
+            openBtn.focus();
+          }
+    
+          openBtn.addEventListener('click', openMenu);
+          closeBtn.addEventListener('click', closeMenu);
+    
+          overlay.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') { closeMenu(); return; }
+            if (e.key !== 'Tab') return;
+            const items = overlay.querySelectorAll(focusable);
+            const first = items[0];
+            const last = items[items.length - 1];
+            if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+            else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+          });
+        })();
+      </script>
+  </body>
+</html>

@@ -3,7 +3,7 @@
    ========================================================================== */
 
 /* 1. CSS Reset & Base Defaults */
-* {
+*, *::before, *::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -28,17 +28,22 @@
     --font-body-alt: 'Geologica', sans-serif;
 
     /* Spacing System */
-    --spacing-xs: 0.25rem;
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 1.5rem;
-    --spacing-xl: 2rem;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-xxl: 5rem;
+  
 
     /* Border Radius System */
     --radius-sm: 4px;
     --radius-md: 8px;
     --radius-lg: 12px;
+    --radius: 0.25rem;
 }
+
+html { scroll-behavior: smooth; }
 
 /* 2. Global Base Styles */
 body {
@@ -158,11 +163,125 @@ h3 {
 }
 
 /* 5. Header, Navigation & Hero Sections */
-.nav {
+
+.site-header {
+    background: var(--color-primary);
+    color: #F7F7E7;
+}
+  
+.header-inner {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    gap: var(--spacing-md);
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+    padding-block: var(--spacing-sm);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: inherit;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.brand-logo { height: 2.5rem; width: auto; }
+
+.menu-button,
+.menu-close {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    min-height: 2.75rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font: var(--font-secondary);
+    font-weight: 700;
+    color: inherit;
+    background: transparent;
+    border: 2px solid currentColor;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+.menu-button:hover,
+.menu-close:hover {
+    background: #ffffff;
+    color: var(--color-primary);
+}
+
+/* Hamburger*/
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+    display: block;
+    width: 1.25rem;
+    height: 2px;
+    background: currentColor;
+    content: "";
+}
+.menu-icon { position: relative; }
+.menu-icon::before { position: absolute; top: -6px; }
+.menu-icon::after  { position: absolute; top: 6px; }
+
+/* X Close icon */
+.menu-icon--close { background: transparent; }
+.menu-icon--close::before { top: 0; transform: rotate(45deg); }
+.menu-icon--close::after  { top: 0; transform: rotate(-45deg); }
+
+/* Full-screen overlay */
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    overflow-y: auto;
+    background: color-mix(in srgb, var(--color-primary) 90%, var(--color-neutral));
+    color: #F7F7E7;
+}
+.menu-overlay[hidden] { display: none; }
+
+body.menu-open { overflow: hidden; }   /* stop page scrolling behind the overlay */
+
+.menu-inner { padding-block: var(--spacing-sm) var(--spacing-xl); }
+
+.menu-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-sm);
+    padding-bottom: var(--spacing-md);
+}
+.menu-title { font-weight: 700; }
+
+.menu-groups {
+    display: grid;
+    gap: var(--spacing-xl);
+    grid-template-columns: 1fr;
+}
+
+.menu-group h2 {
+    font: var(--font-secondary);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-xs);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 2px solid currentColor;
+}
+.menu-group ul { list-style: none; margin: 0; padding: 0; }
+.menu-group a {
+    display: block;
+    padding: var(--spacing-xs) 0;
+    font: var(--font-secondary);
+    font-size: 1.25rem;
+    color: #F7F7E7;
+    text-decoration: none;
+}
+.menu-group a:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+.menu-group a[aria-current="page"] { font-weight: 700; text-decoration: underline; }
+
+/* Light focus ring on the dark overlay */
+.menu-overlay :focus-visible { outline-color: var(--color-highlight); }
+
+@media (min-width: 48rem) {
+  .menu-groups { grid-template-columns: repeat(3, 1fr); gap: var(--spacing-xxl); }
 }
 
 .hero-banner {
