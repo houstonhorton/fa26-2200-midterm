@@ -5,19 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ATLAS | BTU Lab - Mischief Makers</title>
     
-    <!-- Google Fonts required by your design system -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Commissioner:wght@100..900&family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
 
-    <!-- Global Stylesheet -->
     <link rel="stylesheet" href="btu.css">
 
     <style>
-      /* Hero Banner Styling */
       .hero-banner {
         position: relative;
-        background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('assets/MischiefMakersBannerPhoto.htm');
+        background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('assets/mischief-makers.jpg');
         background-size: cover;
         background-position: center;
         padding: var(--spacing-xl) 0;
@@ -43,7 +40,6 @@
         letter-spacing: 1px;
       }
 
-      /* Semantic Layout & Component Styling */
       .container {
         max-width: 1200px;
         margin: 0 auto;
@@ -71,6 +67,10 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: var(--spacing-lg);
+      }
+
+      .director-section {
+        margin-bottom: var(--spacing-xl);
       }
 
       .card {
@@ -124,7 +124,6 @@
   <body>
     <section class="container">
 
-      <!-- Hero Banner Section -->
       <header class="hero-banner">
         <section class="hero-title-box">
           <h1>The BTU "Mischief Makers"</h1>
@@ -133,19 +132,15 @@
 
       <main>
         <article>
-          <!-- Intro Section -->
           <section class="intro-section">
             <h2>Make your Mischief!</h2>
-            <p class="body-text">Use this directory to contact BTU staff about your interests or questions. Next to each person's image, is a list of things they can help you with, and their contact information. Reach out! We love to help.</p>
+            <p class="body-text">Use this directory to contact BTU staff about your interests or questions. Below each person's image is a list of things they can help you with, and their contact information. Reach out! We love to help.</p>
             <p class="body-text"><strong>Become part of the team!</strong> Email Zack Weaver if you're interested in sharing your skills with the community.</p>
           </section>
 
-          <!-- Current Staff -->
-          <h2 class="section-heading">★Fall 2026 Staff★</h2>
-          <section class="team-grid">
-            
-            <article class="card">
-              <img src="assets/MischiefMakersPhoto1.jpg" alt="Zack Weaver">
+          <section class="director-section">
+            <article class="card" style="max-width: 380px;">
+              <img src="assets/zack-weaver.jpg" alt="Zack Weaver">
               <h3>Zack Weaver | Director</h3>
               <p class="small-text">Director, BTU Lab | Assistant Teaching Professor, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:zack.weaver@colorado.edu" class="link">zack.weaver@colorado.edu</a></p>
@@ -161,9 +156,13 @@
                 <li>Way, way more</li>
               </ul>
             </article>
+          </section>
+
+          <h2 class="section-heading">★Fall 2026 Staff★</h2>
+          <section class="team-grid">
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto2.jpg" alt="Bella Consentino">
+              <img src="assets/bella-consentino.jpg" alt="Bella Consentino">
               <h3>Bella Consentino | Staff</h3>
               <p class="small-text">Undergraduate Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:Bella.Consentino@colorado.edu" class="link">Bella.Consentino@colorado.edu</a></p>
@@ -183,7 +182,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto3.jpg" alt="Keturah Dunn">
+              <img src="assets/keturah-dunn.jpg" alt="Keturah Dunn">
               <h3>Keturah Dunn | Staff</h3>
               <p class="small-text">Undergraduate Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:kedu1409@colorado.edu" class="link">kedu1409@colorado.edu</a></p>
@@ -196,7 +195,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto4.jpg" alt="Vani Chhay">
+              <img src="assets/vani-chhay.png" alt="Vani Chhay">
               <h3>Vani Chhay | Staff</h3>
               <p class="small-text">Undergraduate Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:Vanica.Chhay@colorado.edu" class="link">Vanica.Chhay@colorado.edu</a></p>
@@ -214,7 +213,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto5.jpg" alt="Terri Hughes">
+              <img src="assets/terri-hughes.jpg" alt="Terri Hughes">
               <h3>Terri Hughes | Staff</h3>
               <p class="small-text">Undergraduate Student, CMCI</p>
               <p class="small-text"><a href="mailto:Terri.Hughes@colorado.edu" class="link">Terri.Hughes@colorado.edu</a></p>
@@ -232,7 +231,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto6.jpg" alt="Leo Heuring">
+              <img src="assets/leo-heuring.jpg" alt="Leo Heuring">
               <h3>Leo Heuring | Staff</h3>
               <p class="small-text">Undergraduate Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:Leo.Heuring@colorado.edu" class="link">Leo.Heuring@colorado.edu</a></p>
@@ -249,7 +248,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto7.jpg" alt="Sage Morgan-LaRosa">
+              <img src="assets/sage-morgan-larosa.jpg" alt="Sage Morgan-LaRosa">
               <h3>Sage Morgan-LaRosa</h3>
               <p class="small-text">Undergraduate Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:sage.morgan-larosa@colorado.edu" class="link">sage.morgan-larosa@colorado.edu</a></p>
@@ -266,12 +265,11 @@
 
           </section>
 
-          <!-- Volunteer & Emeritus Mischief Makers -->
           <h2 class="section-heading">Volunteer &amp; Emeritus Mischief Makers</h2>
           <section class="team-grid">
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto8.jpg" alt="Danny Rankin">
+              <img src="assets/danny-rankin.jpg" alt="Danny Rankin">
               <h3>Danny Rankin</h3>
               <p class="small-text">Director, Whoaaat! Lab | Assistant Teaching Professor, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:danny.rankin@colorado.edu" class="link">danny.rankin@colorado.edu</a></p>
@@ -286,7 +284,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto9.jpg" alt="Autumn Davis">
+              <img src="assets/autumn-davis.jpg" alt="Autumn Davis">
               <h3>Autumn Davis</h3>
               <p class="small-text">Undergraduate Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:autumn.davis@colorado.edu" class="link">autumn.davis@colorado.edu</a></p>
@@ -304,7 +302,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto10.jpg" alt="Lucky Bonniwell">
+              <img src="assets/lucky-bonniwell.jpg" alt="Lucky Bonniwell">
               <h3>Lucky Bonniwell</h3>
               <p class="small-text">Undergraduate Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:thatcher.bonniwell@colorado.edu" class="link">thatcher.bonniwell@colorado.edu</a></p>
@@ -320,7 +318,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto11.jpg" alt="Yunessa Rodriguez">
+              <img src="assets/yunessa-rodriguez.jpg" alt="Yunessa Rodriguez">
               <h3>Yunessa Rodriguez</h3>
               <p class="small-text">Undergraduate Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:Yunessa.Rodriguez@colorado.edu" class="link">Yunessa.Rodriguez@colorado.edu</a></p>
@@ -335,7 +333,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto12.jpg" alt="Jacob Le Mons">
+              <img src="assets/jacob-le-mons.jpg" alt="Jacob Le Mons">
               <h3>Jacob Le Mons</h3>
               <p class="small-text">Undergraduate Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:jacob.lemons@colorado.edu" class="link">jacob.lemons@colorado.edu</a></p>
@@ -355,7 +353,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto13.jpg" alt="Pete Burke">
+              <img src="assets/pete-burke.png" alt="Pete Burke">
               <h3>Pete Burke</h3>
               <p class="small-text">Undergraduate Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:pete.burke-1@colorado.edu" class="link">pete.burke-1@colorado.edu</a></p>
@@ -374,7 +372,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto14.jpg" alt="Elly Jensen">
+              <img src="assets/elly-jensen.jpg" alt="Elly Jensen">
               <h3>Elly Jensen</h3>
               <p class="small-text">Undergraduate Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:elly.jensen@colorado.edu" class="link">elly.jensen@colorado.edu</a></p>
@@ -389,7 +387,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto15.jpg" alt="Krithik Ranjan">
+              <img src="assets/krithik-ranjan.jpg" alt="Krithik Ranjan">
               <h3>Krithik Ranjan</h3>
               <p class="small-text">PhD Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:Krithik.Ranjan@colorado.edu" class="link">Krithik.Ranjan@colorado.edu</a></p>
@@ -403,7 +401,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto16.jpg" alt="Paul Bailey">
+              <img src="assets/paul-bailey.jpg" alt="Paul Bailey">
               <h3>Paul Bailey</h3>
               <p class="small-text">Graduate Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:peba2699@colorado.edu" class="link">peba2699@colorado.edu</a></p>
@@ -419,7 +417,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto17.jpg" alt="Sena Ucutuk">
+              <img src="assets/sena-ucutuk.jpg" alt="Sena Ucutuk">
               <h3>Sena Ucutuk <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
               <p class="small-text">Undergraduate Student, ATLAS Institute, Computer Science</p>
               <p class="small-text"><a href="mailto:sena.ucutuk@colorado.edu" class="link">sena.ucutuk@colorado.edu</a> | <a href="https://www.linkedin.com/in/sena-ucutuk" class="link" target="_blank">LinkedIn</a></p>
@@ -437,7 +435,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto18.jpg" alt="Arjun Ramachandran">
+              <img src="assets/arjun-rama.jpg" alt="Arjun Ramachandran">
               <h3>Arjun Ramachandran</h3>
               <p class="small-text">Graduate Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:arjun.ramachandran1@colorado.edu" class="link">arjun.ramachandran1@colorado.edu</a></p>
@@ -452,7 +450,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto19.jpg" alt="Bart Baker">
+              <img src="assets/bart-baker.jpg" alt="Bart Baker">
               <h3>Bart Baker <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
               <p class="small-text">Undergraduate Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:Bartholomew.baker@colorado.edu" class="link">Bartholomew.baker@colorado.edu</a></p>
@@ -470,7 +468,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto20.jpg" alt="Xin Wen">
+              <img src="assets/xin-wen.jpg" alt="Xin Wen">
               <h3>Xin Wen</h3>
               <p class="small-text">PhD Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:xin.wen01@colorado.edu" class="link">xin.wen01@colorado.edu</a></p>
@@ -485,7 +483,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto21.jpg" alt="Ashley Stafford">
+              <img src="assets/ashley-stafford.jpg" alt="Ashley Stafford">
               <h3>Ashley Stafford <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
               <p class="small-text">Undergraduate Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:Ashley.Stafford@colorado.edu" class="link">Ashley.Stafford@colorado.edu</a></p>
@@ -502,7 +500,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto22.jpg" alt="Kai Adamchak">
+              <img src="assets/kai-adamchak.jpg" alt="Kai Adamchak">
               <h3>Kai Adamchak <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
               <p class="small-text">Undergraduate Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:kai.adamchak@colorado.edu" class="link">kai.adamchak@colorado.edu</a></p>
@@ -517,7 +515,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto23.jpg" alt="Sophie Berry">
+              <img src="assets/sophie-berry.jpg" alt="Sophie Berry">
               <h3>Sophie Berry <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
               <p class="small-text">Undergraduate Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:sophie.berry@colorado.edu" class="link">sophie.berry@colorado.edu</a></p>
@@ -535,7 +533,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto24.jpg" alt="Kaya Walker">
+              <img src="assets/kaya-walker.jpg" alt="Kaya Walker">
               <h3>Kaya Walker <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
               <p class="small-text">Undergraduate Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:kaya.walker@colorado.edu" class="link">kaya.walker@colorado.edu</a></p>
@@ -551,7 +549,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto25.jpg" alt="Nefeli Hadjiyiannis">
+              <img src="assets/nefeli-hadji.jpg" alt="Nefeli Hadjiyiannis">
               <h3>Nefeli Hadjiyiannis <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
               <p class="small-text">Undergraduate Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:nefeli.hadjiyiannis@colorado.edu" class="link">nefeli.hadjiyiannis@colorado.edu</a></p>
@@ -569,7 +567,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto26.jpg" alt="Andrew Widner">
+              <img src="assets/andrew-widner.jpg" alt="Andrew Widner">
               <h3>Andrew Widner <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
               <p class="small-text">Undergraduate Student, CUID President, ATLAS Ambassador</p>
               <p class="body-text" style="font-weight: 600;">Head 3D Printer Wizard</p>
@@ -586,7 +584,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto27.jpg" alt="Quinn Pearson">
+              <img src="assets/quinn-pearson.jpg" alt="Quinn Pearson">
               <h3>Quinn Pearson</h3>
               <p class="small-text">Undergraduate Student, ATLAS Institute</p>
               <p class="body-text" style="font-weight: 600;">FALL '24 STAFF</p>
@@ -603,7 +601,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto28.jpg" alt="Perry Owens">
+              <img src="assets/perry-owens.jpg" alt="Perry Owens">
               <h3>Perry Owens</h3>
               <p class="small-text">Graduate Student, ATLAS Institute</p>
               <p class="body-text" style="font-weight: 600;">SPRING '24 STAFF</p>
@@ -617,7 +615,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto29.jpg" alt="Zoe Turner">
+              <img src="assets/zoe-turner.jpg" alt="Zoe Turner">
               <h3>Zoe Turner</h3>
               <p class="small-text">Undergraduate, ENVD</p>
               <p class="body-text" style="font-weight: 600;">SPRING '24 STAFF</p>
@@ -635,7 +633,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto30.jpg" alt="Atlas Zaina">
+              <img src="assets/atlas-zaina.jpg" alt="Atlas Zaina">
               <h3>Atlas Zaina <span style="font-size: 0.8rem; font-weight: normal;">(∞)</span></h3>
               <p class="small-text">Undergraduate Student, ATLAS Institute</p>
               <p class="body-text" style="font-weight: 600;">SPRING '24 STAFF</p>
@@ -651,7 +649,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto31.jpg" alt="Kai Hughes">
+              <img src="assets/kai-hughes.jpg" alt="Kai Hughes">
               <h3>Kai Hughes</h3>
               <p class="small-text"><a href="mailto:kai.hughes@colorado.edu" class="link">kai.hughes@colorado.edu</a></p>
               <p class="body-text" style="margin-top: 8px; font-weight: 600;">I am very good at:</p>
@@ -667,7 +665,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto32.jpg" alt="Jeremiah Klinkerman">
+              <img src="assets/jeremiah-klinkerman.jpg" alt="Jeremiah Klinkerman">
               <h3>Jeremiah Klinkerman <span style="font-size: 0.8rem; font-weight: normal;">(Image approximate)</span></h3>
               <p class="small-text">Undergraduate Student, Dinosaur Studies</p>
               <p class="body-text" style="font-weight: 600;">SPRING '24 STAFF</p>
@@ -683,7 +681,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto33.jpg" alt="Hunter Allen-Bonney">
+              <img src="assets/hunter-allen-bonney.jpg" alt="Hunter Allen-Bonney">
               <h3>Hunter Allen-Bonney</h3>
               <p class="small-text">Graduate Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:hunter.allenbonney@colorado.edu" class="link">hunter.allenbonney@colorado.edu</a></p>
@@ -696,7 +694,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto34.jpg" alt="S Wu">
+              <img src="assets/s-wu.jpg" alt="S Wu">
               <h3>S Wu <span style="font-size: 0.8rem; font-weight: normal;">[currently in Canada]</span></h3>
               <p class="small-text">PhD Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:shanshan.wu@colorado.edu" class="link">shanshan.wu@colorado.edu</a></p>
@@ -713,7 +711,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto35.jpg" alt="McClain Martensen">
+              <img src="assets/mcclain-martensen.jpg" alt="McClain Martensen">
               <h3>McClain Martensen <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
               <p class="small-text">Undergraduate Student, ATLAS Institute</p>
               <p class="small-text"><a href="mailto:moma9500@colorado.edu" class="link">moma9500@colorado.edu</a></p>
@@ -729,7 +727,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto36.jpg" alt="Gray Assi">
+              <img src="assets/gray-assi.jpg" alt="Gray Assi">
               <h3>Gray Assi <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
               <p class="small-text">CUID Undergraduate Student, ATLAS Ambassador</p>
               <p class="small-text"><a href="mailto:gray.assi@colorado.edu" class="link">gray.assi@colorado.edu</a></p>
@@ -743,7 +741,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto37.jpg" alt="Hi! I'm Dover Horesh">
+              <img src="assets/dover-horesh.jpg" alt="Hi! I'm Dover Horesh">
               <h3>Hi! I'm Dover Horesh <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
               <p class="small-text"><a href="mailto:dho2148@colorado.edu" class="link">dho2148@colorado.edu</a></p>
               <p class="body-text" style="margin-top: 8px; font-weight: 600;">I work magic with:</p>
@@ -756,7 +754,7 @@
             </article>
 
             <article class="card">
-              <img src="assets/MischiefMakersPhoto1.jpg" alt="Katie Gilchrist">
+              <img src="assets/katie-gilchrist.jpg" alt="Katie Gilchrist">
               <h3>Katie Gilchrist <span style="font-size: 0.8rem; font-weight: normal;">(Graduated!)</span></h3>
               <p class="small-text"><a href="mailto:kagi3666@colorado.edu" class="link">kagi3666@colorado.edu</a></p>
               <p class="body-text" style="margin-top: 8px; font-weight: 600;">I can do the things:</p>
@@ -773,7 +771,6 @@
         </article>
       </main>
 
-      <!-- Footer Section -->
       <footer>
         <p class="small-text">©Copyright 2026 by nobody. All rights reversed.</p>
       </footer>
