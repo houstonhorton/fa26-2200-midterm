@@ -14,7 +14,7 @@
     <style>
       .hero-banner {
         position: relative;
-        background: linear-gradient(rgba(55, 190, 90, 0.55), rgba(55, 190, 90, 0.55)), url('assets/tools-banner.jpg');
+        background: linear-gradient(rgba(55, 190, 90, 0.55), rgba(55, 190, 90, 0.55)), url('assets/tools-photo.jpg');
         background-size: cover;
         background-position: center;
         padding: var(--spacing-xl) 0;
@@ -70,7 +70,7 @@
         box-shadow: 0 2px 6px rgba(0,0,0,0.04);
         border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-columns: 350px 1fr;
         gap: var(--spacing-xl);
         align-items: center;
       }
@@ -171,6 +171,9 @@
       }
 
       @media(max-width: 900px) {
+        .feature-section {
+          grid-template-columns: 1fr;
+        }
         .stats-section {
           flex-direction: column;
           gap: var(--spacing-lg);
@@ -197,7 +200,7 @@
 
           <section class="feature-section">
             <figure class="feature-image-box">
-              <img src="assets/tools.jpg" alt="BTU Tools">
+              <img src="assets/toolsphoto1.jpg" alt="BTU Tools">
             </figure>
 
             <section class="feature-text-box">
@@ -272,11 +275,6 @@
           </section>
         </article>
       </main>
-
-      <footer>
-        <p class="small-text">&copy;Copyright 2026 by nobody. All rights reversed. This is an imitation website for the CU Boulder ATLAS BTU.</p>
-      </footer>
-
     </section>
   </body>
 </html>

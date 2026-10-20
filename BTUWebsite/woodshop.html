@@ -14,7 +14,7 @@
     <style>
       .hero-banner {
         position: relative;
-        background: linear-gradient(rgba(232, 91, 86, 0.55), rgba(232, 91, 86, 0.55)), url('assets/wood-shop.jpg');
+        background: linear-gradient(rgba(232, 91, 86, 0.4), rgba(232, 91, 86, 0.4)), url('assets/woodshop-photo.jpg');
         background-size: cover;
         background-position: center;
         padding: var(--spacing-xl) 0;
@@ -30,7 +30,6 @@
         padding: var(--spacing-md) var(--spacing-lg);
         display: inline-block;
         border-radius: var(--radius-sm);
-        margin-bottom: var(--spacing-md);
       }
 
       .hero-title-box h1 {
@@ -39,21 +38,6 @@
         margin: 0;
         color: var(--color-text-light);
         letter-spacing: 1px;
-      }
-
-      .cta-button {
-        display: inline-block;
-        padding: 14px 28px;
-        background: white;
-        color: #2286c3;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: 600;
-        transition: .3s;
-      }
-
-      .cta-button:hover {
-        transform: translateY(-2px);
       }
 
       .container {
@@ -72,14 +56,28 @@
         margin-bottom: var(--spacing-xl);
       }
 
-      .intro-card {
+      .intro-section {
         background: white;
-        max-width: 1100px;
-        margin: 0 auto var(--spacing-xl);
-        padding: 35px;
+        padding: var(--spacing-lg);
         border-radius: var(--radius-md);
-        box-shadow: 0 8px 25px rgba(0,0,0,.08);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
         border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+      }
+
+      .intro-grid {
+        display: grid;
+        grid-template-columns: 350px 1fr;
+        gap: var(--spacing-xl);
+        align-items: center;
+      }
+
+      .intro-grid img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        border-radius: var(--radius-sm);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
       }
 
       .intro-card h2 {
@@ -199,9 +197,6 @@
         <section class="hero-title-box">
           <h1>Wood Shop</h1>
         </section>
-        <div>
-          <a href="calendar.html" class="cta-button">Register for Orientation</a>
-        </div>
       </header>
 
       <main>
@@ -211,14 +206,21 @@
             <p>⚠ Orientation Required Before Using Equipment</p>
           </section>
 
-          <section class="intro-card">
-            <h2>Getting Started</h2>
-            <ul>
-              <li>✅ Entrance marked in PINK</li>
-              <li>✅ Orientation required</li>
-              <li>✅ Open to BTU members</li>
-              <li>✅ Tools use color-coded organization</li>
-            </ul>
+          <section class="intro-section">
+            <section class="intro-grid">
+              <figure>
+                <img src="assets/woodshop1.jpg" alt="Wooden cup crafted in Wood Shop">
+              </figure>
+              <section class="intro-card">
+                <h2>Getting Started</h2>
+                <ul>
+                  <li>✅ Entrance marked in PINK</li>
+                  <li>✅ Orientation required</li>
+                  <li>✅ Open to BTU members</li>
+                  <li>✅ Tools use color-coded organization</li>
+                </ul>
+              </section>
+            </section>
           </section>
 
           <!-- INFO -->
