@@ -1,62 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATLAS | BTU Lab - Calendar</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Commissioner:wght@100..900&family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
 
-    <title>ATLAS | BTU Lab</title>
-    <!-- comment here <link href="" rel="stylesheet" type="text/css"> -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="btu.css">
 
+    <style>
+      .hero-banner {
+        position: relative;
+        background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('assets/calendar-photo.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: var(--spacing-xl) 0;
+        margin-bottom: var(--spacing-xl);
+        border-radius: var(--radius-md);
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      }
+
+      .hero-title-box {
+        background-color: rgba(0, 121, 145, 0.75);
+        color: var(--color-text-light);
+        padding: var(--spacing-md) var(--spacing-lg);
+        display: inline-block;
+        border-radius: var(--radius-sm);
+      }
+
+      .hero-title-box h1 {
+        font-family: var(--font-primary);
+        font-size: 3.5rem;
+        margin: 0;
+        color: var(--color-text-light);
+        letter-spacing: 1px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .calendar-section {
+        background-color: #ffffff;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+      }
+
+      .calendar-wrapper {
+        position: relative;
+        width: 100%;
+        height: 750px;
+        overflow: hidden;
+        border-radius: var(--radius-sm);
+        margin-top: var(--spacing-md);
+      }
+
+      .calendar-wrapper iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      footer {
+        margin-top: var(--spacing-xl);
+        padding-top: var(--spacing-md);
+        border-top: 1px solid color-mix(in srgb, var(--color-neutral) 20%, transparent);
+        text-align: center;
+      }
+    </style>
   </head>
 
   <body>
-    <div class="header">
-      <h1><a href="/assets/btulogo.jpg"><img src="assets/btulogo.jpg" alt="logo"></a>BLOW. THINGS. UP.</h1>
-    </div>
+    <section class="container">
 
-    <div class="nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Tools</a></li>
-        <li><a href="#">Wood Shop</a></li>
-        <li><a href="#">Sewing & Textiles</a></li>
-        <li><a href="#">Electronics</a></li>
-        <li><a href="#">Lasers</a></li>
-        <li><a href="#">3D Printers</a></li>
-        <li><a href="#">CNC</a></li>
-        <li><a href="#">BTU Mischief Makers</a></li>
-        <li><a href="#">BTU Lab Calendar</a></li>
-        <li><a href="#">Lab Rules & Policies</a></li>
-        <li><a href="#">Workshops</a></li>
-        <li><a href="#">Help Us Blow Things Up</a></li>
-        <li><a href="#">Sewing & Textiles</a></li>
-      </ul>
+      <header class="hero-banner">
+        <section class="hero-title-box">
+          <h1>BTU Lab Calendar</h1>
+        </section>
+      </header>
 
-      <form class="search">
-        <input type="search" name="q" placeholder="Search">
-        <input type="submit" value="Go!">
-      </form>
-    </div>
+      <main>
+        <article>
+          <section class="calendar-section">
+            <h2 class="section-heading">Upcoming Lab Hours &amp; Events</h2>
+            <p class="body-text">Check out the schedule below for general shop hours, tool orientations, and special lab events. Click "Copy to my calendar" inside the frame to keep track of sessions!</p>
+            
+            <section class="calendar-wrapper">
+              <iframe src="https://calendar.google.com/calendar/u/0/embed?color=%2392e1c0&color=%23cd74e6&color=%23f83a22&color=%23fad165&src=01c19e46b7d1df63b8c2bf86c13e9e8d4dd48407953069b76258fa20a9f6e946@group.calendar.google.com&src=1d4bdcc88938abd2d291838c548916abba1d14f79ad53e49a62b76c16d0ce4fc@group.calendar.google.com&src=917af08c35085b7a6203c14ddcfb9a84b26f31030114e022d423518e82d442e3@group.calendar.google.com&src=atlasbtulab@gmail.com" frameborder="0" scrolling="no"></iframe>
+            </section>
+          </section>
+        </article>
+      </main>
 
-    <main>
-      <article>
-        <h1>BTU Lab Calendar</h1>
-        
-       
+      <footer>
+        <p class="small-text">©Copyright 2026 by nobody. All rights reversed.</p>
+      </footer>
 
-        <h2>Placeholder</h2>
-        
-
-
-        <aside>
-        
-        </aside>
-      </article>
-    </main>
-
-    <footer>
-      <p>©Copyright 2026 by nobody. All rights reversed. This is an immitation website for the CU Boulder ATLAS BTU. </p>
-    </footer>
-
+    </section>
   </body>
 </html>

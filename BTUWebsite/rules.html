@@ -1,62 +1,230 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATLAS | BTU Lab - Rules &amp; Policies</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Commissioner:wght@100..900&family=Geologica:wght,CRSV@100..900,0&display=swap" rel="stylesheet">
 
-    <title>ATLAS | BTU Lab</title>
-    <!-- comment here <link href="" rel="stylesheet" type="text/css"> -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="btu.css">
 
+    <style>
+      .hero-banner {
+        position: relative;
+        background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url('assets/rules-photo.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: var(--spacing-xl) 0;
+        margin-bottom: var(--spacing-xl);
+        border-radius: var(--radius-md);
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      }
+
+      .hero-title-box {
+        background-color: rgba(0, 121, 145, 0.75);
+        color: var(--color-text-light);
+        padding: var(--spacing-md) var(--spacing-lg);
+        display: inline-block;
+        border-radius: var(--radius-sm);
+      }
+
+      .hero-title-box h1 {
+        font-family: var(--font-primary);
+        font-size: 3.5rem;
+        margin: 0;
+        color: var(--color-text-light);
+        letter-spacing: 1px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .intro-section {
+        background-color: #ffffff;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      }
+
+      .rules-content-section {
+        background-color: #ffffff;
+        padding: var(--spacing-lg);
+        border-radius: var(--radius-md);
+        margin-bottom: var(--spacing-xl);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
+      }
+
+      .section-heading {
+        font-family: var(--font-primary);
+        font-size: 2.5rem;
+        color: var(--color-secondary);
+        margin-top: var(--spacing-md);
+        margin-bottom: var(--spacing-md);
+        text-align: center;
+        letter-spacing: 1px;
+      }
+
+      .rules-featured-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: var(--spacing-xl);
+        text-align: center;
+      }
+
+      .rules-featured-block img {
+        width: 100%;
+        max-width: 400px;
+        height: 280px;
+        object-fit: cover;
+        border-radius: var(--radius-sm);
+        margin-top: var(--spacing-md);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      }
+
+      .rules-subheading {
+        font-family: var(--font-primary);
+        font-size: 2rem;
+        color: var(--color-primary);
+        margin-top: var(--spacing-lg);
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .rules-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--spacing-lg);
+        margin-bottom: var(--spacing-xl);
+      }
+
+      .rules-column {
+        background-color: color-mix(in srgb, var(--color-neutral) 4%, #ffffff);
+        padding: var(--spacing-md);
+        border-radius: var(--radius-sm);
+        border: 1px solid color-mix(in srgb, var(--color-neutral) 10%, transparent);
+      }
+
+      .rules-column ul {
+        margin: var(--spacing-xs) 0 0 var(--spacing-md);
+        padding: 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      .rules-column li {
+        margin-bottom: var(--spacing-xs);
+      }
+
+      .policies-footer-section {
+        margin-top: var(--spacing-xl);
+        padding-top: var(--spacing-md);
+        border-top: 1px solid color-mix(in srgb, var(--color-neutral) 20%, transparent);
+      }
+
+      .policies-footer-section h3 {
+        font-family: var(--font-primary);
+        font-size: 1.5rem;
+        color: var(--color-secondary);
+        margin-bottom: var(--spacing-xs);
+      }
+
+      .policies-footer-section ol {
+        margin: var(--spacing-xs) 0 var(--spacing-md) var(--spacing-md);
+        padding: 0;
+        font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      .policies-footer-section li {
+        margin-bottom: 4px;
+      }
+
+      footer {
+        margin-top: var(--spacing-xl);
+        padding-top: var(--spacing-md);
+        border-top: 1px solid color-mix(in srgb, var(--color-neutral) 20%, transparent);
+        text-align: center;
+      }
+    </style>
   </head>
 
   <body>
-    <div class="header">
-      <h1><a href="/assets/btulogo.jpg"><img src="assets/btulogo.jpg" alt="logo"></a>BLOW. THINGS. UP.</h1>
-    </div>
+    <section class="container">
 
-    <div class="nav">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Tools</a></li>
-        <li><a href="#">Wood Shop</a></li>
-        <li><a href="#">Sewing & Textiles</a></li>
-        <li><a href="#">Electronics</a></li>
-        <li><a href="#">Lasers</a></li>
-        <li><a href="#">3D Printers</a></li>
-        <li><a href="#">CNC</a></li>
-        <li><a href="#">BTU Mischief Makers</a></li>
-        <li><a href="#">BTU Lab Calendar</a></li>
-        <li><a href="#">Lab Rules & Policies</a></li>
-        <li><a href="#">Workshops</a></li>
-        <li><a href="#">Help Us Blow Things Up</a></li>
-        <li><a href="#">Sewing & Textiles</a></li>
-      </ul>
+      <header class="hero-banner">
+        <section class="hero-title-box">
+          <h1>BTU Rules & Policies</h1>
+        </section>
+      </header>
 
-      <form class="search">
-        <input type="search" name="q" placeholder="Search">
-        <input type="submit" value="Go!">
-      </form>
-    </div>
+      <main>
+        <article>
+          <section class="intro-section">
+            <p class="body-text"><strong>Materials:</strong> BTU LAB IS NOT A FREE SUPPLY STORE. But there are many ways to barter, including displaying your work in BTU, tagging us in social media, offering workshops, volunteering to organize supplies, and more. If you need something, we ask that you give something in return.</p>
+          </section>
 
-    <main>
-      <article>
-        <h1>Lab Rules & Policies</h1>
-        
-       
+          <section class="rules-content-section">
+            <h2 class="section-heading">RULES</h2>
+            
+            <section class="rules-featured-block">
+              <h3 style="font-family: var(--font-primary); font-size: 2.2rem; color: var(--color-primary); margin: 0;">1. "BE COOL."</h3>
+              <img src="assets/be-cool.gif" alt="Be Cool">
+            </section>
 
-        <h2>Placeholder</h2>
-        
+            <h3 class="rules-subheading">Ways to be "COOL"</h3>
 
+            <section class="rules-grid">
+              <section class="rules-column">
+                <ul>
+                  <li>Respect others, their space, and their work.</li>
+                  <li>Observe safety for you, others, and equipment.</li>
+                  <li>PLEASE...report problems with equipment.</li>
+                  <li>Report taking the last "________" ex. Glue stick.</li>
+                  <li>First ask approval to remove any tool or material from the lab.</li>
+                  <li>Protect surfaces from hot glue, paint, marmots, etc.</li>
+                  <li>Keep common work areas clear of your stuff, when you can.</li>
+                  <li>Put things back where they belong, not just where you found them.</li>
+                </ul>
+              </section>
 
-        <aside>
-        
-        </aside>
-      </article>
-    </main>
+              <section class="rules-column">
+                <ul>
+                  <li>Let the staff know if anyone is not being cool.</li>
+                  <li>Keep it clean.</li>
+                  <li>Sweep up scraps of material on the floor.</li>
+                  <li>Use tools, materials and processes as intended, when appropriate (a.k.a get trained).</li>
+                  <li>Did we mention, "get trained"? That's why you're here!</li>
+                  <li>Keep common work areas clear of your stuff, when you can.</li>
+                  <li>Put things back where they belong, not just where you found them.</li>
+                  <li>Leave out anything else, not listed here, that negatively affects the BTU, ATLAS, CU, and EARTH community. Please, do not make us make a rule.</li>
+                </ul>
+              </section>
+            </section>
 
-    <footer>
-      <p>©Copyright 2026 by nobody. All rights reversed. This is an immitation website for the CU Boulder ATLAS BTU. </p>
-    </footer>
+            <section class="policies-footer-section">
+              <h3>Policies:</h3>
+              <ol>
+                <li>BTU Lab observes all <a href="https://www.colorado.edu" class="link" target="_blank">policies and codes of conduct of Colorado University</a>.</li>
+                <li>Access to BTU will not be renewed for anyone repeatedly disregarding this policy and policies and/or disrupting others.</li>
+              </ol>
+              <p class="small-text"><strong>BTU LAB IS NOT A FREE SUPPLY STORE.</strong> But there are many ways to barter, including displaying your work in BTU, tagging us in social media, offering workshops, volunteering to organize supplies, and more. If you need something, we ask that you give something in return.</p>
+            </section>
+          </section>
+        </article>
+      </main>
 
+      <footer>
+        <p class="small-text">©Copyright 2026 by nobody. All rights reversed.</p>
+      </footer>
+
+    </section>
   </body>
 </html>
