@@ -1,8 +1,3 @@
-/* ==========================================================================
-   ATLAS BTU LAB - GLOBAL DESIGN SYSTEM & STYLESHEET (btu.css)
-   ========================================================================== */
-
-/* 1. CSS Reset & Base Defaults */
 *, *::before, *::after{
     margin: 0;
     padding: 0;
@@ -10,24 +5,23 @@
 }
 
 :root {
-    /* Color Palette - Core Brand Colors */
-    --color-primary: #231F20;     /* Dark Slate/Black - Main Brand Color */
-    --color-secondary: #BB4430;   /* Rust Red - Action/Heading Accent */
-    --color-accent: #007991;      /* Deep Teal - Highlight Color */
-    --color-neutral: #2D5C35;     /* Forest Green - Secondary Text/Neutral */
-    --color-highlight: #FF9F1C;   /* Warm Orange - Attention Color */
+  
+    --color-primary: #231F20;
+    --color-secondary: #BB4430;
+    --color-accent: #007991;
+    --color-neutral: #2D5C35;
+    --color-highlight: #FF9F1C;
     
-    /* Derived Colors */
     --color-background: color-mix(in srgb, var(--color-neutral) 10%, #F7F7E7);
     --color-text-dark: var(--color-neutral);
     --color-text-light: #ffffff;
 
-    /* Typography Families */
+
     --font-primary: 'Bebas Neue', sans-serif;
     --font-secondary: 'Commissioner', sans-serif;
     --font-body-alt: 'Geologica', sans-serif;
 
-    /* Spacing System */
+
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 1.5rem;
@@ -45,7 +39,7 @@
 
 html { scroll-behavior: smooth; }
 
-/* 2. Global Base Styles */
+
 body {
     font-family: var(--font-secondary);
     line-height: 1.6;
@@ -63,7 +57,7 @@ body {
     width: 100px;
 }
 
-/* 3. Typography Styles */
+
 h1 {
     font-family: var(--font-primary);
     font-size: 3.5rem;
@@ -99,7 +93,7 @@ h3 {
     color: color-mix(in srgb, var(--color-text-dark) 85%, transparent);
 }
 
-/* Typography Utility Classes */
+
 .bebas-neue-regular {
     font-family: var(--font-primary);
     font-weight: 600;
@@ -121,7 +115,7 @@ h3 {
     font-variation-settings: "slnt" 0, "FLAR" 0, "VOLM" 0;
 }
 
-/* 4. Interactive Components (Buttons & Links) */
+
 .button {
     display: inline-block;
     padding: var(--spacing-sm) var(--spacing-md);
@@ -162,7 +156,7 @@ h3 {
     color: var(--color-neutral);
 }
 
-/* 5. Header, Navigation & Hero Sections */
+
 
 .site-header {
     background: var(--color-primary);
@@ -212,7 +206,7 @@ h3 {
     color: var(--color-primary);
 }
 
-/* Hamburger*/
+
 .menu-icon,
 .menu-icon::before,
 .menu-icon::after {
@@ -226,12 +220,12 @@ h3 {
 .menu-icon::before { position: absolute; top: -6px; }
 .menu-icon::after  { position: absolute; top: 6px; }
 
-/* X Close icon */
+
 .menu-icon--close { background: transparent; }
 .menu-icon--close::before { top: 0; transform: rotate(45deg); }
 .menu-icon--close::after  { top: 0; transform: rotate(-45deg); }
 
-/* Full-screen overlay */
+
 .menu-overlay {
     position: fixed;
     inset: 0;
@@ -330,7 +324,7 @@ body.menu-open { overflow: hidden; }   /* stop page scrolling behind the overlay
     padding-bottom: var(--spacing-xs);
 }
 
-/* 6. Card & Grid Components */
+
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -374,7 +368,7 @@ body.menu-open { overflow: hidden; }   /* stop page scrolling behind the overlay
     margin-bottom: 2px;
 }
 
-/* 7. Design System Swatches & Spacing Demos */
+
 .color-palette {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -404,7 +398,6 @@ body.menu-open { overflow: hidden; }   /* stop page scrolling behind the overlay
     height: 50px;
 }
 
-/* 8. Global Footer */
 footer {
     margin-top: var(--spacing-xl);
     padding-top: var(--spacing-md);
