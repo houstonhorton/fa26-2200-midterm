@@ -126,77 +126,64 @@
 
   <body>
     <header class="site-header">
-      <div class="container header-inner">
+      <div class="header-inner">
   
-        <a class="brand" href="index.html">
-          <img class="brand-logo"
-                src="assets/btulogo.jpg"
-                alt="logo">
+        <a class="brand" href="/BTUWebsite/index.html">
+          <img class="brand-logo" src="/BTUWebsite/assets/btulogo.jpg" alt="BTU logo">
           <span class="brand-name">ATLAS | BTU Lab</span>
         </a>
   
-        <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-overlay">
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="menu-panel">
           <span class="menu-icon" aria-hidden="true"></span>
           <span>Menu</span>
         </button>
   
+        <div id="menu-panel" class="menu-panel" hidden>
+          <nav aria-label="Main" class="menu-groups">
+  
+            <section class="menu-group" aria-labelledby="menu-visit">
+              <h2 id="menu-visit">Visit</h2>
+              <ul>
+                <li><a href="/BTUWebsite/index.html" aria-current="page">Home</a></li>
+                <li><a href="/BTUWebsite/calendar.html">BTU Lab Calendar</a></li>
+                <li><a href="/BTUWebsite/rules.html">Lab Rules &amp; Policies</a></li>
+              </ul>
+            </section>
+  
+            <section class="menu-group" aria-labelledby="menu-equipment">
+              <h2 id="menu-equipment">Equipment</h2>
+              <ul>
+                <li><a href="/BTUWebsite/tools.html">Tools</a></li>
+                <li><a href="/BTUWebsite/woodshop.html">Wood Shop</a></li>
+                <li><a href="/BTUWebsite/sewingtext.html">Sewing &amp; Textiles</a></li>
+                <li><a href="/BTUWebsite/electronics.html">Electronics</a></li>
+                <li><a href="/BTUWebsite/lasers.html">Lasers!</a></li>
+                <li><a href="/BTUWebsite/3dprinters.html">3D Printers</a></li>
+                <li><a href="/BTUWebsite/cnc.html">CNC</a></li>
+              </ul>
+            </section>
+  
+            <section class="menu-group" aria-labelledby="menu-community">
+              <h2 id="menu-community">Community</h2>
+              <ul>
+                <li><a href="/BTUWebsite/mischief.html">BTU Mischief Makers</a></li>
+                <li><a href="/BTUWebsite/workshops.html">Workshops</a></li>
+                <li><a href="/BTUWebsite/help.html">Help Us Blow Things Up</a></li>
+                <li><a href="/BTUWebsite/faculty.html">Faculty</a></li>
+              </ul>
+            </section>
+  
+          </nav>
+        </div>
+  
       </div>
     </header>
-
   
-  <div id="menu-overlay" class="menu-overlay" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
-    <div class="container menu-inner">
-
-      <div class="menu-top">
-        <span class="menu-title">ATLAS | BTU Lab</span>
-        <button class="menu-close" type="button">
-          <span>Close</span>
-          <span class="menu-icon menu-icon--close" aria-hidden="true"></span>
-        </button>
-      </div>
-
-      <nav aria-label="Main" class="menu-groups">
-
-        <section class="menu-group" aria-labelledby="menu-visit">
-          <h2 id="menu-visit">Visit</h2>
-          <ul>
-            <li><a href="/BTUWebsite/index.html" aria-current="page">Home</a></li>
-            <li><a href="/BTUWebsite/calendar.html">BTU Lab Calendar</a></li>
-            <li><a href="/BTUWebsite/rules.html">Lab Rules &amp; Policies</a></li>
-          </ul>
-        </section>
-
-        <section class="menu-group" aria-labelledby="menu-equipment">
-          <h2 id="menu-equipment">Equipment</h2>
-          <ul>
-            <li><a href="/BTUWebsite/tools.html">Tools</a></li>
-            <li><a href="/BTUWebsite/woodshop.html">Wood Shop</a></li>
-            <li><a href="/BTUWebsite/sewingtext.html">Sewing &amp; Textiles</a></li>
-            <li><a href="/BTUWebsite/electronics.html">Electronics</a></li>
-            <li><a href="/BTUWebsite/lasers.html">Lasers!</a></li>
-            <li><a href="/BTUWebsite/3dprinters.html">3D Printers</a></li>
-            <li><a href="/BTUWebsite/cnc.html">CNC</a></li>
-          </ul>
-        </section>
-
-        <section class="menu-group" aria-labelledby="menu-community">
-          <h2 id="menu-community">Community</h2>
-          <ul>
-            <li><a href="/BTUWebsite/mischief.html">BTU Mischief Makers</a></li>
-            <li><a href="/BTUWebsite/workshops.html">Workshops</a></li>
-            <li><a href="/BTUWebsite/help.html">Help Us Blow Things Up</a></li>
-            <li><a href="/BTUWebsite/faculty.html">Faculty</a></li>
-          </ul>
-        </section>
-      </nav>
-    </div>
-  </div>
-  
-  <header class="hero-banner">
-    <section class="hero-title-box">
-      <h1>CNC</h1>
-    </section>
-  </header>
+    <header class="hero-banner">
+      <section class="hero-title-box">
+        <h1>CNC</h1>
+      </section>
+    </header>
 
 
       <main>
@@ -226,39 +213,28 @@
         </article>
       </main>
       <script>
-       
-       
         (function () {
-          const openBtn = document.querySelector('.menu-button');
-          const closeBtn = document.querySelector('.menu-close');
-          const overlay = document.getElementById('menu-overlay');
-          const focusable = 'a[href], button:not([disabled])';
+          const btn = document.querySelector('.menu-button');
+          const panel = document.getElementById('menu-panel');
     
-          function openMenu() {
-            overlay.hidden = false;
-            document.body.classList.add('menu-open');
-            openBtn.setAttribute('aria-expanded', 'true');
-            closeBtn.focus();
+          function setOpen(open, returnFocus) {
+            panel.hidden = !open;
+            btn.setAttribute('aria-expanded', String(open));
+            if (!open && returnFocus) btn.focus();
           }
     
-          function closeMenu() {
-            overlay.hidden = true;
-            document.body.classList.remove('menu-open');
-            openBtn.setAttribute('aria-expanded', 'false');
-            openBtn.focus();
-          }
+          btn.addEventListener('click', () => setOpen(panel.hidden));
     
-          openBtn.addEventListener('click', openMenu);
-          closeBtn.addEventListener('click', closeMenu);
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !panel.hidden) setOpen(false, true);
+          });
     
-          overlay.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape') { closeMenu(); return; }
-            if (e.key !== 'Tab') return;
-            const items = overlay.querySelectorAll(focusable);
-            const first = items[0];
-            const last = items[items.length - 1];
-            if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-            else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+          document.addEventListener('click', (e) => {
+            if (!panel.hidden && !panel.contains(e.target) && !btn.contains(e.target)) setOpen(false);
+          });
+    
+          document.addEventListener('focusin', (e) => {
+            if (!panel.hidden && !panel.contains(e.target) && !btn.contains(e.target)) setOpen(false);
           });
         })();
       </script>
