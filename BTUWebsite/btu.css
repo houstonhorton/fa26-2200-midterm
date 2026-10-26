@@ -401,6 +401,7 @@ footer {
        display: flex;
        flex-direction: row;
     }
+    
  }
  /* TODO: Add media query for 700px breakpoint */
  @media (min-width: 700px) {
@@ -425,3 +426,66 @@ footer {
        margin-left: 20px;
     }
  }
+ @media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  .site-header {
+    margin-top: -1rem;
+    margin-inline: -1rem;
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 10vw, 3rem);
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .body-text {
+    font-size: 1.125rem;
+  }
+
+  .hero-banner {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .hero-title-box {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .hero-title-box h1 {
+    font-size: clamp(2rem, 9vw, 2.75rem);
+    overflow-wrap: anywhere;
+  }
+
+  .welcome-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .team-grid,
+  .color-palette {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .menu-panel {
+    right: 0.5rem;
+    width: min(24rem, calc(100vw - 2rem));
+    max-width: calc(100vw - 2rem);
+    max-height: 75vh;
+    overflow: auto;
+  }
+
+  .menu-group a {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  img,
+  iframe {
+    max-width: 100%;
+  }
+}
