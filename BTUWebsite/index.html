@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,6 +86,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: var(--spacing-lg);
+        min-width: 0;
       }
 
       .materials-section {
@@ -114,6 +115,7 @@
         border: 1px solid color-mix(in srgb, var(--color-neutral) 15%, transparent);
         box-shadow: 0 2px 6px rgba(0,0,0,0.04);
         transition: transform 0.2s ease;
+        overflow-wrap: break-word;
       }
 
       .card:hover {
@@ -122,6 +124,7 @@
 
       .card img {
         width: 100%;
+        max-width: 100%;
         height: 200px;
         object-fit: cover;
         display: block;
@@ -143,7 +146,8 @@
       }
 
       .insta {
-        width:60px;
+        width: 60px;
+        height: auto;
       }
 
       footer {
@@ -154,7 +158,7 @@
         padding-bottom: var(--spacing-xl);
       }
     </style>
-</head>
+  </head>
 
   <body>
     <header class="site-header">
@@ -189,7 +193,7 @@
                 <li><a href="woodshop.html">Wood Shop</a></li>
                 <li><a href="sewingtext.html">Sewing &amp; Textiles</a></li>
                 <li><a href="electronics.html">Electronics</a></li>
-                <li><a href="lasers.html">Lasers!</a></li>
+                <li><a href="lasers.html">Lasers</a></li>
                 <li><a href="3dprinters.html">3D Printers</a></li>
                 <li><a href="cnc.html">CNC</a></li>
               </ul>
@@ -216,15 +220,15 @@
       </section>
     </header>
 
-    <main>
+    <main class="container">
       <article>
 
        <h1 class="section-heading" style="font-size: var(--spacing-xxxl);">HOME</h1>
 
-       <p class="body-text" style="padding: 50px; text-align: center;"><strong>The ATLAS BTU Lab is an inclusive community 
+       <p class="body-text" style="padding: 20px 50px; text-align: center;"><strong>The ATLAS BTU Lab is an inclusive community 
         makerspace facilitating projects at the 
         intersection of Art, Design, Engineering and Architecture.</strong></p>
-        <p class="body-text" style="margin-bottom: 48px; padding-bottom: 24px; text-align: center;"><strong>It serves multiple functions as a general workspace, and workshop host. 
+        <p class="body-text" style="margin-bottom: 48px; padding-bottom: 12px; text-align: center;"><strong>It serves multiple functions as a general workspace, and workshop host. 
         </strong></p>
 
         <section class="team-grid">
@@ -235,7 +239,7 @@
             <section>
               <h2 style="color: var(--color-accent);">WHO?</h2>
               <p class="body-text" style="font-size: var(--spacing-sm);"><strong>Anyone* can gain access to BTU. Our goal is to provide the most diverse, inclusive environment for makers of all types in a highly experimental and productive space. </strong></p>
-              <p class="body-text" style="font-size: var(--spacing-sm); margin-top: 36px; padding-top: 36px;">*Due to increased campus security, we are currently unable to sponsor BuffOne Guest cards.
+              <p class="body-text" style="font-size: var(--spacing-sm); margin-top: 24px; padding-top: 12px;">*Due to increased campus security, we are currently unable to sponsor BuffOne Guest cards.</p>
             </section>
           </section>
 
@@ -255,8 +259,8 @@
             </figure>
             <section>
               <h2 style="color: var(--color-highlight);">WHEN?</h2>
-              <p class="body-text" style="font-size: var(--spacing-sm);"><strong>The orientation* schedule, and all scheduled events can be found on the <a href="/BTUWebsite/calendar.html" class="link">BTU Calendar</a>. </strong></p>
-              <p class="body-text" style="font-size: var(--spacing-sm); margin-top: 36px; padding-top: 36px;">[*Some things involve separate orientations...like lasers and stuff. Check the calendar and the pages above for your interests.]</p>
+              <p class="body-text" style="font-size: var(--spacing-sm);"><strong>The orientation* schedule, and all scheduled events can be found on the <a href="calendar.html" class="link">BTU Calendar</a>. </strong></p>
+              <p class="body-text" style="font-size: var(--spacing-sm); margin-top: 24px; padding-top: 12px;">[*Some things involve separate orientations...like lasers and stuff. Check the calendar and the pages above for your interests.]</p>
             </section>
           </section>
 
@@ -274,7 +278,7 @@
         
           <section class="card">
             <div class="map">
-              <iframe style="width: 100%;"
+              <iframe style="width: 100%; border:0;"
                 title="Map showing the ATLAS Institute, University of Colorado Boulder, 1125 18th St, Boulder, CO"
                 src="https://maps-api-ssl.google.com/maps?hl=en-US&amp;ll=40.007575,-105.269933&amp;output=embed&amp;q=University+of+Colorado+Boulder,+320+UCB,+1125+18th+St,+Boulder,+CO+80309,+United+States+(ATLAS+Institute,+University+of+Colorado+Boulder)&amp;z=18"
                 loading="lazy"
@@ -291,33 +295,33 @@
         
         <section class="team-grid">
           <article class="card">
-            <a href="/BTUWebsite/lasers.html"><img src="assets/FacultyPhoto2.jpg" alt="Laser Cutting"></a>
-            <h2>LASER CUTTING</h2>
+            <a href="lasers.html"><img src="assets/FacultyPhoto2.jpg" alt="Laser Cutting"></a>
+            <h3>LASER CUTTING</h3>
             <p class="body-text">Laser cutter access requires a one-time orientation. The schedule for this, and all BTU events can be found on the <a href="calendar.html" class="link">CALENDAR</a> page of the BTU website.</p>
-            <p class="body-text" style="margin-top: 8px;">Additional support for students is explained on the <a href="#" class="link">LASERS</a> page of the BTU website.</p>
-            <p class="body-text" style="margin-top: 8px;">Instructional requirements for faculty needing laser cutters can be found <a href="#" class="link">HERE</a>.</p>
+            <p class="body-text" style="margin-top: 8px;">Additional support for students is explained on the <a href="lasers.html" class="link">LASERS</a> page of the BTU website.</p>
+            <p class="body-text" style="margin-top: 8px;">Instructional requirements for faculty needing laser cutters can be found <a href="faculty.html" class="link">HERE</a>.</p>
           </article>
 
           <article class="card">
-            <a href="/BTUWebsite/3dprinters.html"><img src="assets/FacultyPhoto3.jpg" alt="3D Printing"></a>
-            <h2>3D PRINTING</h2>
+            <a href="3dprinters.html"><img src="assets/FacultyPhoto3.jpg" alt="3D Printing"></a>
+            <h3>3D PRINTING</h3>
             <p class="body-text">3D-Printing access requires a one-time, 10-15 minute orientation for all users. This orientation can be scheduled for individuals or classes, upon request.</p>
-            <p class="body-text" style="margin-top: 8px;">To learn about available resources or to request an orientation, please visit the <a href="#" class="link">3D PRINTING</a> page of the BTU website.</p>
-            <p class="body-text" style="margin-top: 8px;">Instructional requirements for faculty needing 3D printers can be found <a href="#" class="link">HERE</a>.</p>
+            <p class="body-text" style="margin-top: 8px;">To learn about available resources or to request an orientation, please visit the <a href="3dprinters.html" class="link">3D PRINTING</a> page of the BTU website.</p>
+            <p class="body-text" style="margin-top: 8px;">Instructional requirements for faculty needing 3D printers can be found <a href="faculty.html" class="link">HERE</a>.</p>
           </article>
 
           <article class="card">
-            <a href="/BTUWebsite/woodshop.html"><img src="assets/FacultyPhoto4.png" alt="Wood Shop"></a>
-            <h2>WOOD SHOP</h2>
+            <a href="woodshop.html"><img src="assets/FacultyPhoto4.png" alt="Wood Shop"></a>
+            <h3>WOOD SHOP</h3>
             <p class="body-text">Wood shop access requires a one-time orientation regardless of past experience. The schedule for this and all BTU events can be found on the <a href="calendar.html" class="link">CALENDAR</a> page of the BTU website.</p>
-            <p class="body-text" style="margin-top: 8px;">Additional information about wood shop tools and policies can be found on the <a href="#" class="link">WOOD SHOP</a> page of the BTU website.</p>
-            <p class="body-text" style="margin-top: 8px;">Instructional requirements for faculty needing the wood shop can be found <a href="#" class="link">HERE</a>.</p>
+            <p class="body-text" style="margin-top: 8px;">Additional information about wood shop tools and policies can be found on the <a href="woodshop.html" class="link">WOOD SHOP</a> page of the BTU website.</p>
+            <p class="body-text" style="margin-top: 8px;">Instructional requirements for faculty needing the wood shop can be found <a href="faculty.html" class="link">HERE</a>.</p>
           </article>
 
           <article class="card">
-            <img src="assets/FacultyPhoto5.jpg" alt="Other Resources">
-            <h2>OTHER RESOURCES</h2>
-            <p class="body-text">BTU has many additional resources, which are explained on the <a href="#" class="link">BTU WEBSITE</a>, as well as requirements for any training you might need.</p>
+            <a href="tools.html"><img src="assets/FacultyPhoto5.jpg" alt="Other Resources"></a>
+            <h3>OTHER RESOURCES</h3>
+            <p class="body-text">BTU has many additional resources, which are explained on the <a href="tools.html" class="link">BTU WEBSITE</a>, as well as requirements for any training you might need.</p>
             <p class="body-text" style="margin-top: 8px;">Support is also provided by BTU's amazing student staff, the <a href="mischief.html" class="link">BTU MISCHIEF MAKERS</a>.</p>
             <p class="body-text" style="margin-top: 8px;">Each of these offer instructional support in many topics, listed on the Mischief Makers page, along with their contact information.</p>
           </article>
@@ -331,7 +335,10 @@
         <section class="welcome-section" style="margin-top: var(--spacing-xl); text-align: center;">
           <h3 style="font-family: var(--font-primary); font-size: 1.8rem; color: var(--color-secondary); margin-bottom: var(--spacing-xs);">NEED MORE HELP FROM STAFF?</h3>
           <p class="body-text">Below is the regular schedule and contact information for the current semester.</p>
-          <p class="body-text" style="margin-top: var(--spacing-sm); font-weight: bold;">Pending...</p>
+          <p class="body-text" style="margin-top: var(--spacing-sm); font-weight: bold;">
+            Staff Lab Hours: Monday – Friday, 10:00 AM – 6:00 PM<br>
+            General Inquiries: <a href="mailto:atlasbtulab@gmail.com" class="link">atlasbtulab@gmail.com</a>
+          </p>
         </section>
 
         <section style="text-align: center; margin-top: var(--spacing-xl);">
@@ -339,7 +346,7 @@
           <p class="body-text">You and your students can help us out by following and tagging your <em style="color: #f83a22; font-weight: bold;">RAD</em> projects on Instagram, @btulab_cu.</p>
           <p style="margin-top: var(--spacing-md);">
             <a href="https://www.instagram.com/btulab_cu/" target="_blank" style="display: inline-block; color: inherit; text-decoration: none;">
-            <img class="insta" src="/BTUWebsite/assets/instalogo.png" alt="insta logo"></a>
+            <img class="insta" src="assets/instalogo.png" alt="insta logo"></a>
           </p>
         </section>
 
