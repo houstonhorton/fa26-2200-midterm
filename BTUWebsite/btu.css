@@ -426,6 +426,7 @@ footer {
        margin-left: 20px;
     }
  }
+ 
  @media (max-width: 600px) {
   body {
     padding: 1rem;
